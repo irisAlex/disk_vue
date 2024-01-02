@@ -132,23 +132,23 @@ export default {
 	},
 	methods: {
 		getData() {
-			this.$http({
-				url: 'https://cnodejs.org/api/v1/topics',
-				method: 'get',
-				params: {
-					page: 1,
-					limit: 20,
-				}
-			})
-				.then((response) => {
-					if (response.data.success === true) {
-						this.posts = response.data.data;
-						this.loading = true;
-					}
-				})
-				.catch(function (error) {
-					console.log(error);
-				});
+			// this.$http({
+			// 	url: 'https://cnodejs.org/api/v1/topics',
+			// 	method: 'get',
+			// 	params: {
+			// 		page: 1,
+			// 		limit: 20,
+			// 	}
+			// })
+			// 	.then((response) => {
+			// 		if (response.data.success === true) {
+			// 			this.posts = response.data.data;
+			// 			this.loading = true;
+			// 		}
+			// 	})
+			// 	.catch(function (error) {
+			// 		console.log(error);
+			// 	});
 		}
 	},
 	beforeMount() {

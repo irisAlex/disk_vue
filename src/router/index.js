@@ -1,11 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import PostList from '@/components/PostList'
 import Article from '@/components/Article'
-import SideBar from '@/components/SideBar'
 import UserInfo from '@/components/UserInfo'
 import Vip from '@/components/Vip'
-import Home from '@/components/Home'
 import Announce from '@/components/Announce'
 import Login from '@/components/Login'
 Vue.use(Router)
