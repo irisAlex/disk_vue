@@ -1,11 +1,78 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>vue_addname</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+
+<head>
+  <title>购买高级VIP - 迅牛网盘</title>
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="renderer" content="webkit">
+  <!-- <base href="http://www.xunniuwp.com/" /> -->
+  <link rel="shortcut icon" href="favicon.ico">
+  <script type="text/javascript" src="http://www.xunniuwp.com/includes/js/jquery-1.8.3.min.js"></script>
+  <script type="text/javascript" src="http://www.xunniuwp.com/includes/js/common.js"></script>
+  <link href="http://www.xunniuwp.com/images/common.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="http://www.xunniuwp.com/templates/phpdisk_new_blue/images/style.css" media="screen" rel="stylesheet"
+    type="text/css" />
+  <script type="text/javascript" src="http://www.xunniuwp.com/includes/js/pace.min.js"></script>
+  <link type="text/css" rel="stylesheet" href="images/pace/silver/pace-theme-minimal.css" />
+  <link href="http://www.xunniuwp.com/templates/phpdisk_new_blue/images/css/index.css" rel="stylesheet" media="screen">
+  <link href="http://www.xunniuwp.com/templates/phpdisk_new_blue/images/css/comm.css" rel="stylesheet" media="screen">
+  <link href="http://www.xunniuwp.com/templates/phpdisk_new_blue/images/css/index_com.css" rel="stylesheet"
+    media="screen">
+  <link href="http://www.xunniuwp.com/templates/phpdisk_new_blue/images/css/vip.css" rel="stylesheet" media="screen">
+  <link href="http://www.xunniuwp.com/templates/phpdisk_new_blue/images/css/account.css" rel="stylesheet">
+  <!--[if lte IE 8]>
+      <link rel="stylesheet" type="text/css" href="templates/phpdisk_new_blue/images/css/ie.css">
+      <![endif]-->
+  <script type="text/javascript" src="http://www.xunniuwp.com/templates/phpdisk_new_blue/images/js/comm.js"
+    charset="utf-8"></script>
+    <script src="http://www.xunniuwp.com/templates/phpdisk_new_blue/images/js/bootstrap-modal.js"></script>
+</head>
+
+<body class="has-navbar-fixed-top page-index  pace-done">
+  <div class="pace  pace-inactive">
+    <div class="pace-progress" data-progress-text="100%" data-progress="99"
+      style="transform: translate3d(100%, 0px, 0px);">
+      <div class="pace-progress-inner"></div>
+    </div>
+    <div class="pace-activity"></div>
+  </div>
+  <div class="modal fade hide" id="infoModal" aria-hidden="false"></div>
+  <div id="app"></div>
+
+
+  <footer id="footer">
+    <div class="inner">
+      <div class="container">
+        <div class="subfooter">
+          <div style="text-align:center">
+            <p>
+            </p>
+            <p>Copyright ©- 2020迅牛网盘 服务邮箱：<a target="_blank" href="mailto:xunniu@outlook.com"><span
+                  style="font-family:Microsoft YaHei">xunniu@outlook.com</span></a></p>
+            <p></p>
+          </div>
+          <div style="text-align:center">
+            <a href="about.php?action=protocol">网站服务条款</a>&nbsp;&nbsp;
+            <a href="about.php?action=help">常见问题</a>&nbsp;&nbsp;
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- built files will be auto injected -->
+  <script type='text/javascript'>
+    $(function () {
+      if (navigator.userAgent.indexOf("MSIE") > 0) {
+        if (navigator.userAgent.indexOf("MSIE 6.0") > 0 || navigator.userAgent.indexOf("MSIE 7.0") > 0 || navigator.userAgent.indexOf("MSIE 8.0") > 0) {
+          $("#ie_tips").show();
+          $("#ie_tips").html("<div class=\"alert alert-warning alert-dismissable\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button><strong>Warning!</strong> 本站已经停止对IE8以下版本浏览器进行美化兼容，推荐使用更快更先进的IE9、谷歌浏览器、Firefox浏览器，享受飞一般的快感。</div>");
+        }
+      }
+    });
+  </script>
+  <div style="display:none;">
+  </div>
+</body>
+
 </html>
