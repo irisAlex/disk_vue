@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Article from '@/components/Article'
-import UserInfo from '@/components/UserInfo'
 import Vip from '@/components/Vip'
 import Announce from '@/components/Announce'
 import Login from '@/components/Login'
@@ -10,13 +9,13 @@ Vue.use(Router)
 export default new Router({
 	mode: 'history',
   routes: [
-    {
-      path: '/',
-      name: 'root',
-      components: {
-      	main:Vip
-      }
-    },
+    // {
+    //   path: '/',
+    //   name: 'root',
+    //   components: {
+    //   	main:Vip
+    //   }
+    // },
 	{
 		path:'/vip',
 		name :'vip',
@@ -28,28 +27,21 @@ export default new Router({
     	path:'/about',
     	name:'post_content',
     	components:{
-    		main:Article
+    		list:Article
     	},
-    },
-    {
-    	path:'/user/:name',
-    	name:'user_info',
-    	components:{
-    		main:UserInfo,
-    	}
     },
 	{
 		path: '/announce',
 		name: 'an',
 		components:{
-			main: Announce
+			list: Announce
 		}
 	},
 	{
 		path: '/account',
 		name: 'login-register',
 		components: {
-			main: Login
+			login: Login
 		}
 	}
   ]

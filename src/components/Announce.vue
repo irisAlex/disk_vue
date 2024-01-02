@@ -73,9 +73,6 @@
         </div>
     </div>
 </template>
-<script type="text/javascript">
-var action = document.getElementById("money"); if (!action) { document.getElementById("ann_list").className = 'active'; } else { action.className = 'active'; }
-</script>
      <script>
     export default {
         name: 'announce',
