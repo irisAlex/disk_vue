@@ -4,6 +4,7 @@ import Article from '@/components/Article'
 import Vip from '@/components/Vip'
 import Announce from '@/components/Announce'
 import Login from '@/components/Login'
+import Down from '@/components/DownLoad'
 Vue.use(Router)
 
 export default new Router({
@@ -42,6 +43,13 @@ export default new Router({
 		name: 'login-register',
 		components: {
 			login: Login
+		}
+	},
+	{
+		path: '/down',
+		name: 'vip-down',
+		components: {
+			main: Down
 		}
 	}
   ]
