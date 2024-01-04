@@ -54,7 +54,7 @@
 import Side from './Side.vue'
 import Catalog from './Title.vue'
 export default {
-    name: 'announce',
+    name: 'side',
     data() {
         return {
           

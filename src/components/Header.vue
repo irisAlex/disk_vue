@@ -16,10 +16,12 @@
 						<div class="nav-collapse collapse" id="top_menu">
 							<ul class="nav main-menu menu-left">
 								<li><a href="vip" class="active" rel="nofollow">升级会员</a></li>
-								<li><a href="about" rel="nofollow">分享赚钱</a></li>
-								<li><a href="announce" rel="nofollow">网站公告</a> </li>
+								<li><a href="about" rel="nofollow">隐私政策</a></li>
+								<li><a href="announce" rel="nofollow">规则条款</a> </li>
+								<li><a href="announce" rel="nofollow">侵权政策</a> </li>
+								<li><a href="announce" rel="nofollow">联系我们</a> </li>
+								<li><a href="about" rel="nofollow">关于我们</a> </li>
 							</ul>
-
 							<ul class="nav pull-right main-menu">
 								<li><a data-placement="bottom" class="_tooltip" title="" href="account"
 										data-original-title="免费注册">注册</a></li>

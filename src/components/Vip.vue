@@ -4,7 +4,7 @@
 			<div class="row-fluid header">
 				<h2 class="page-title">
 					<span style="color:#003399;font-size:16px;">充值即时到账不支持退款,</span><span
-						style="color:#E53333;font-size:16px;">本站已经停止对IE8以下版本浏览器进行美化兼容，推荐使用最新版本360浏览器、谷歌浏览器、Firefox浏览器。</span>
+						style="color:#E53333;font-size:16px;">推荐使用最新版本谷歌浏览器、Firefox浏览器访问本站，否则会有兼容问题。</span>
 					<div class="clear"></div>
 					<div id="content">
 						<div class="container">
