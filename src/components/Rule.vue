@@ -2,7 +2,7 @@
     <div>
         <div id="highlighted">
             <div class="container">
-                <catalog catalogTitle="最新公告" details="3333"></catalog>
+                <catalog catalogTitle="规则条款" details="关于使用xunniun 网盘的规则条款"></catalog>
             </div>
         </div>
         <div id="content">
@@ -11,33 +11,45 @@
                 <div class="row">
 
                     <div class="span8">
+                        <art content="
+     声明
 
-                        <div class="block">
+    这些 xunniun 服务条款,结合隐私政策和其他条款和条件使用整合的参考和可以和适用于特定的服务(“协议”)共同支配您的访问和使用 xunniun 网站内容、应用、软件産品和服务提供给您,或通过 xunniun 网站(总的来说,“服务”)。无论你有订阅,是注册用户,或者只是从一个共享的链接,下载不需要注册账户,所有这些相互作用与xunniun网站和使用任何服务是一个显式的接受这个协议意味著您已阅读,理解并同意遵守本协议的所有条款,是一个具有法律约束力的合同。
+                        
+    如果您正在使用的服务代表一个公司,政府机构或部门,您肯定您有权接受本协议代表您的公司或机构,文中所有引用“您”或“您”将不仅对自己,而且指公司或组织。
+                        
+    如果您不完全同意协议的条款，而您作爲一个负责任的用户，选择继续使用该服务，您将会受到协议条款的约束。
+                        
+    xunniun(也称爲“我们”)可能会修改该协议，该协议将在其发布到网站后立即生效。您继续使用本网站和任何相关的服务表明您接受对本协议的变更，您同意受此修改或修订的约束。如果您对我们网站的任何内容不满意，您的唯一补救办法就是停止使用该服务。您使用我们的服务是有风险的。本协议中任何内容均不得视爲授予第三方权利或利益。
+    
+    服务条款
+    上传服务只允许18岁以上的人使用。
 
-                            <h3 class="block-title sub-title"
-                                style="width: 770px;word-break:keep-all;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">
-                                <a href="ann_list-1.html"><span style="color:#E53333;font-size:18px;"><strong>净网2020 ·
-                                            严打不良信息传播行为</strong></span> </a><small>2020-07-10 13:04</small>
-                            </h3>
-
-                            <h3 class="block-title sub-title"
-                                style="width: 770px;word-break:keep-all;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">
-                                <a href="ann_list-2.html"><span style="font-size:18px;">每天支付一次</span> </a><small>2021-03-22
-                                    17:05</small>
-                            </h3>
-
-                            <h3 class="block-title sub-title"
-                                style="width: 770px;word-break:keep-all;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">
-                                <a href="ann_list-3.html"><span style="font-size:18px;">周二、周四、周六、周日双倍</span>
-                                </a><small>2020-08-13 12:27</small>
-                            </h3>
-
-                            <h3 class="block-title sub-title"
-                                style="width: 770px;word-break:keep-all;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">
-                                <a href="ann_list-4.html"><span style="font-size:18px;">关于出租共享账户</span>
-                                </a><small>2020-07-13 22:45</small>
-                            </h3>
-                        </div>
+    
+    1、用户在xunniun网盘的网页上发布信息或者使用xunniun网盘的服务时必须符合《计算机信息网络国际联网安全保护管理办法》、《互联网信息服务管理办法》、《互联网电子公告服务管理规定》、《维护互联网安全的决定》、《互联网新闻信息服务管理规定》等相关法律规定。
+    2、xunniun网盘是一个向广大用户提供数据存储、分享等的在线服务。xunniun网盘是信息存储空间平台，其本身不直接上传、提供内容，对用户传输内容不做任何修改或编辑。
+    3、 用户理解，xunniun网盘服务仅提供相关的网络服务，除此之外与相关网络服务有关的设备（如个人电脑、手机、及其他与接入互联网或移动网有关的装置）及所需的费用（如为接入互联网而支付的电话费及上网费、为使用移动网而支付的手机费）均应由用户自行负担。
+    4、任何经由本服务以上传、张贴、发送即时信息、电子邮件或任何其他方式传送的资讯、资料、文字、软件、音乐、音讯、照片、图形、视讯、信息、用户的登记资料或其他资料（以下简称“内容”），无论系公开还是私下传送，均由内容提供者、使用者对其上传、使用行为自行承担责任。xunniun网盘服务作为信息存储空间服务平台，无法控制经由本服务传送之内容，也无法对用户的使用行为进行全面控制，因此不能保证内容的合法性、正确性、完整性、真实性或品质；用户已预知使用本服务时，可能会接触到令人不快、不适当等内容，并同意将自行加以判断并承担所有风险，而不依赖于xunniun网盘服务。
+    5、用户注册时有权给自己的网盘账户命名，但用户名或昵称中不能含有种族歧视、影射领袖、诋毁他人名誉、低级趣味、诽谤等内容或含义
+    6、不得利用xunniun网盘的服务复制、发布、传播或以其它方式传送含有下列内容之一的信息：
+        1) 反对宪法所确定的基本原则；
+        2) 危害国家安全、泄露国家秘密、颠覆国家政权、破坏国家统一；
+        3) 损害国家荣誉和利益；
+        4) 攻击政府、政府官员；
+        5) 散布谣言、扰乱社会秩序、破坏社会稳定；
+        6) 煽动民族仇恨、民族歧视、破坏民族团结；
+        7) 散布淫秽、色情、赌博、暴力、凶杀、恐怖或者教唆犯罪的；
+        8) 破坏国家宗教政策，宣扬邪教和封建迷信的；
+        9) 侮辱或者诽谤他人，侵害他人合法权利的；
+        10) 煽动非法集会、结社、游行、示威、聚众扰乱社会秩序的；
+        11) 以非法民间组织名义活动的；
+        12) 含有虚假、有害、胁迫、侵害他人隐私、骚扰、侵害、中伤、粗俗、猥亵、或其它道德上令人反感的内容；
+        13) 可能会妨害第三方权益的文件或者信息，例如（包括但不限于）：病毒代码、黑客程序、软件破解注册信息等；
+        14) 含有中国法律、法规、规章、条例以及任何具有法律效力之规范所限制或禁止的其它内容。
+    7、用户违反本协议或相关的服务条款的规定，导致或产生的任何第三方主张的任何索赔、要求或损失，包括合理的律师费，您同意赔偿xunniun网盘开发组，并使之免受损害。对此，xunniun网盘开发组有权视用户的行为性质，采取包括但不限于删除用户上传的文件、暂停使用许可、终止服务、回收帐号、追究法律责任等措施。对恶意网盘帐号或利用xunniun网盘服务进行违法活动、捣乱、骚扰、欺骗、其他用户以及其他违反本协议的行为，xunniun网盘开发组有权回收其帐号。同时，xunniun网盘开发组会视司法部门的要求，协助调查。
+    8、用户应承担所有因其个人行为而直接或间接导致的民事或刑事法律责任，因用户行为给xunniun网盘开发组造成损失的，用户应负责赔偿。
+    9、xunniun网盘不对用户所发布信息的删除或储存失败承担任何责任。xunniun网盘有权判定用户的行为是否符合中国法律法规的规定以及xunniun网盘服务协议的要求，如果用户违背了有关法律法规的规定或本协议的规定，xunniun网盘有中断对其提供服务的权利。
+    10、本规则未涉及的问题参见国家有关法律法规，当本规则与国家法律法规冲突时，以国家法律法规为准。"></art>
                     </div>
                     <!-- 右侧导航 -->
                     <side></side>
@@ -53,11 +65,12 @@
 <script>
 import Side from './Side.vue'
 import Catalog from './Title.vue'
+import Art from './Article.vue'
 export default {
-    name: 'side',
+    name: 'about',
     data() {
         return {
-          
+
         }
     },
     computed: {
@@ -107,9 +120,10 @@ export default {
             this.getData();
         }
     },
-    components:{
+    components: {
         Side,
-        Catalog
+        Catalog,
+        Art
     }
 }
 </script> 

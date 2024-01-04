@@ -15,12 +15,8 @@
 								class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a>
 						<div class="nav-collapse collapse" id="top_menu">
 							<ul class="nav main-menu menu-left">
-								<li><a href="vip" class="active" rel="nofollow">升级会员</a></li>
-								<li><a href="about" rel="nofollow">隐私政策</a></li>
-								<li><a href="announce" rel="nofollow">规则条款</a> </li>
-								<li><a href="announce" rel="nofollow">侵权政策</a> </li>
-								<li><a href="announce" rel="nofollow">联系我们</a> </li>
-								<li><a href="about" rel="nofollow">关于我们</a> </li>
+								<li v-for="item  in items" :key="item.link" :class="currentactive == key ? '':'active'"
+								@click="checkPrice(key)"><a :href="item.link"  rel="nofollow">{{ item.message }}</a></li>
 							</ul>
 							<ul class="nav pull-right main-menu">
 								<li><a data-placement="bottom" class="_tooltip" title="" href="account"
@@ -40,7 +36,21 @@ export default {
 	name: 'Header',
 	data() {
 		return {
-		}
+            items: [
+				{ message: '高级帐户', 'link':"vip"},
+                { message: '隐私政策', 'link':"policy"},
+                { message: '规则条款', 'link':"rule"},
+                { message: '联系我们', 'link':"contact"},
+                { message: '关于我们' , 'link':"about" }
+ 
+            ]
+        }
+	},
+	methods:{
+		checkPrice(index) {
+			console.log(index)
+				this.currentactive = index;
+			}
 	}
 }
 </script>

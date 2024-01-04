@@ -14,8 +14,8 @@
 									<div class="span3 pricing hover-effect" style="width:200px">
 										<div class="pricing-head">
 											<h3>三个月会员 <span><span
-														style="color:#999999;font-size:16px;">平均每天0.97元</span></span></h3>
-											<h4>88<i>元</i> <span>三个月(90天)</span></h4>
+														style="color:#FFE500;font-size:16px;">平均每天0.38元</span></span></h3>
+											<h4>35<i>元</i> <span>三个月(90天)</span></h4>
 										</div>
 										<ul class="pricing-content unstyled">
 											<li><i class="icon-globe"></i> 当天下载额度 200 次</li>
@@ -32,8 +32,8 @@
 									<div class="span3 pricing hover-effect" style="width:200px">
 										<div class="pricing-head">
 											<h3>一个月会员 <span><span
-														style="color:#999999;font-size:16px;">平均每天1.33元</span></span></h3>
-											<h4>39<i>元</i> <span>一个月(30天)</span></h4>
+														style="color:#FFE500;font-size:16px;">平均每天0.5元</span></span></h3>
+											<h4>15<i>元</i> <span>一个月(30天)</span></h4>
 										</div>
 										<ul class="pricing-content unstyled">
 											<li><i class="icon-globe"></i> 当天下载额度 150 次</li>
@@ -50,7 +50,7 @@
 									<div class="span3 pricing hover-effect" style="width:200px">
 										<div class="pricing-head">
 											<h3>半年会员 <span><span
-														style="color:#999999;font-size:16px;">平均每天0.71元</span></span></h3>
+														style="color:#FFE500;font-size:16px;">平均每天0.71元</span></span></h3>
 											<h4>128<i>元</i> <span>半年(180天)</span></h4>
 										</div>
 										<ul class="pricing-content unstyled">
@@ -68,7 +68,7 @@
 									<div class="span3 pricing hover-effect" style="width:200px">
 										<div class="pricing-head">
 											<h3>一年会员 <span><span
-														style="color:#999999;font-size:16px;">平均每天0.51元</span></span></h3>
+														style="color:#FFE500;font-size:16px;">平均每天0.51元</span></span></h3>
 											<h4>188<i>元</i> <span>一年(365天)</span></h4>
 										</div>
 										<ul class="pricing-content unstyled">

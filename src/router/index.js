@@ -4,6 +4,9 @@ import Vip from '@/components/Vip'
 import Login from '@/components/Login'
 import Down from '@/components/DownLoad'
 import About from '@/components/About'
+import Policy from '@/components/Policy'
+import Rule from '@/components/Rule'
+import Contact from '@/components/Contact'
 Vue.use(Router)
 
 export default new Router({
@@ -42,6 +45,27 @@ export default new Router({
 		name: 'about',
 		components: {
 			list: About
+		}
+	},
+	{
+		path: '/policy',
+		name: 'policy',
+		components: {
+			main: Policy
+		}
+	},
+	{
+		path: '/rule',
+		name: 'rule',
+		components: {
+			main: Rule
+		}
+	},
+	{
+		path: '/contact',
+		name: 'contact',
+		components: {
+			main: Contact
 		}
 	},
   ]
