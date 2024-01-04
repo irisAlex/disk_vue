@@ -6,8 +6,8 @@
 				<div class="inner">
 					<div class="container">
 						<div class="brand">
-							<a href="http://www.xunniuwp.com/">
-								<img src="http://www.xunniuwp.com/templates/phpdisk_new_blue/images/logo.png"
+							<a href="http://www.xunniunwp.com/">
+								<img src="static/img/logo.png"
 									style="width: 180px; height: 60px;">
 							</a>
 						</div>

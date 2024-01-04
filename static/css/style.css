@@ -1,0 +1,229 @@
+/**
+##
+#	Project: PHPDISK File Storage Solution
+#	This is NOT a freeware, use is subject to license terms.
+#
+#	Site: http://www.phpdisk.com
+#
+#	$Id: style.css 160 2015-10-03 07:03:08Z along $
+#
+#	Copyright (C) 2008-2015 PHPDisk Team. All Rights Reserved.
+#
+##
+*/
+img{border:0}
+li{list-style:none; margin:0px; padding:0px;}
+A:link {
+	COLOR: #003366; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #2329e6; TEXT-DECORATION: none
+}
+A:hover {
+	 color:#12459C; TEXT-DECORATION: underline
+}
+.clear{
+	clear:both
+}
+.bold{font-weight:bold}
+.alt_bg{ background:#EDEDED}
+.td_line td{border-bottom:1px #cccccc dotted; height:30px}
+.td_line2 td{border-bottom:1px #cccccc dotted; height:40px; font-size:14px;}
+
+.logo_l{ padding-left:10px;float:left}
+.logo_r{padding:5px 20px; float:right}
+
+.color1 { background-color: #fcfcfc; }
+.color2 { background-color: #f9f9f9; }
+.color3 { background-color: #d0d0d0; }
+.color4 { background-color: #f1f1f1; }
+.color5 {background-color:#ddffff}
+
+.txtgray{color:#666666}
+.txtgreen{ color:#008800}
+.txtred{ color:#FF0000}
+.txtblue{color:#0000FF}
+.f8{font-size:8px}
+.f10{font-size:10px}
+.f12{font-size:12px}
+.f14{font-size:14px}
+.f18{font-size:18px}
+
+.cmt_u_box{}
+.cmt_u_box .cmt_title{font-size:14px}
+.cmt_u_box .cmt_cts{padding:5px;border:1px #A0CAE3 solid; background:#DEEBF3; margin-bottom:8px}
+.cmt_u_box .cmt_cts .cmt_name{padding:5px}
+.cmt_u_box .cmt_cts .cmt_content{padding:5px; background:#FFFFFF}
+/* download page*/
+.dl_box_wrap{width:auto;}
+.dl_box_wrap .tit{ background:#F5F5F5 url("title_bg.jpg");padding-left:22px; height:37px; font-size:18px;}
+.dl_box_wrap .dl_box{float:left}
+.dl_box_wrap .dl_box2{width:50%; float:right}
+.dl_box_wrap .dl_box .tit2{font-size:14px; background:#F5F5F5; padding:5px 20px; font-weight:bold}
+.dl_box_wrap .dl_box .d0{font-size:14px}
+.dl_box_wrap .dl_box .d0 .d1{width:150px; padding:10px; float:left;}
+.dl_box_wrap .dl_box .d0 .d2{width:150px;padding:10px; float:left; }
+/* multi upload*/
+.upload_style{ margin-bottom:8px;float:left}
+.upload_btn{float:left}
+#upload_btn{background:url("../../../images/upload.png"); width:52px; height:22px; border:0; cursor:pointer}
+#upload_btn a:hover{background:url("../../../images/upload2.png");}
+#upl_detail{display:none; padding:8px; color:#252525}
+.up_tips{margin-top:120px; margin-left:140px; font-size:16px; color:#CCCCCC}
+
+.store_nav{padding:10px}
+#up_msg_tips{width:auto; padding:5px; background:#FFFFDD; border:#FFCC00 1px solid; color:#008800}
+
+#upload_box{width:482px; height:280px; overflow-y:scroll; border:1px #CDCDCD solid}
+#upload_box .progressWrapper {
+	margin-left:10px;
+	width: 445px;
+	overflow: hidden;
+}
+
+#upload_box .progressContainer {
+	margin: 5px;
+	padding: 4px;
+	border: solid 1px #E8E8E8;
+	background-color: #F7F7F7;
+	overflow: hidden;
+}
+#upload_box .message {
+	margin: 1em 0;
+	padding: 10px 20px;
+	border: solid 1px #FFDD99;
+	background-color: #FFFFCC;
+	overflow: hidden;
+}
+#upload_box .up_red {
+	border: solid 1px #B50000;
+	background-color: #FFEBEB;
+}
+
+#upload_box .up_green {
+	border: solid 1px #DDF0DD;
+	background-color: #DAE7F0;
+}
+
+#upload_box .up_blue {
+	border: solid 1px #666666;
+	background-color: #337ABB;
+}
+
+#upload_box .progressName {
+	font-size: 12px;
+	color: #555;
+	width: 300px;
+	height: 14px;
+	text-align: left;
+	white-space: nowrap;
+	padding:5px;
+}
+
+#upload_box .progressBarInProgress,
+#upload_box .progressBarComplete,
+#upload_box .progressBarError {
+	font-size: 4px;
+	width: 0%;
+	height: 2px;
+	background-color: #73C8F5;
+	margin-top: 2px;
+	border:1px #fafafa solid
+}
+
+#upload_box .progressBarComplete {
+	width: 100%;
+	background-color: green;
+	visibility: hidden;
+}
+
+#upload_box .progressBarError {
+	width: 100%;
+	background-color: red;
+	visibility: hidden;
+}
+
+#upload_box .progressBarStatus {
+	margin-top: 2px;
+	width: 320px;
+	font-size: 12px;
+	font-family: Arial;
+	text-align: left;
+	white-space: nowrap;
+}
+
+#upload_box a.progressCancel {
+	font-size: 0;
+	display: block;
+	height: 13px;
+	width: 13px;
+	background-image: url(../../../images/upload_cancel.gif);
+	background-repeat: no-repeat;
+	background-position: -13px 0px;
+	float: right;
+}
+
+#upload_box a.progressCancel:hover {
+	background-position: 0px 0px;
+}
+
+#ctn .item{ height:40px; line-height:40px; border-bottom:1px dotted #ccc;}
+#ctn .item a{ word-wrap:word-break;word-break:break-all;}
+
+.share_info a{text-decoration:none; color:#000}
+.share_info{
+margin: 0;
+height: 46px;
+width: 203px;
+margin-top:5px;
+}
+.share_info li{float: left;
+text-align: center;
+border-right: 1px solid #f2f2f4;
+width: 43px;
+margin: 0 3px 3px;
+overflow: hidden;
+cursor:pointer;
+}
+.share_info li em{
+display: block;
+line-height: 20px;
+margin-bottom: 5px;
+font-weight: 700;
+font-family: Tahoma;
+font-size: 16px;
+color: #333;
+font-style: normal;
+}
+.share_info li em:hover{color:#0066cc}
+.share_info li span:hover{color:#0066cc}
+
+#mall_layout .p_list{width:180px; padding:10px; float:left; border:1px #DBEDF5 solid; margin-left:12px; margin-bottom:10px;}
+#mall_layout .p_list ul{ margin:0; padding:0}
+#mall_layout .p_list ul:hover{background-color: #f4f8ff;border-color: #c0d8fc;}
+#mall_layout .p_list li{ line-height:20px; margin:0; padding:0}
+#mall_layout .p_list li img{ padding-top:10px}
+#mall_layout .m_header{ clear:both; border-bottom: 1px #CCCCCC dotted; padding-top:6px}
+#mall_layout .m_header li{ padding:10px}
+#mall_layout .m_footer{ clear:both; margin-top:25px;border-top: 1px #CCCCCC dotted; padding-top:6px}
+#mall_layout .m_footer li{ padding:3px}
+#mall_layout .m_income{ clear:both; margin-top:25px;border: 1px #CCCCCC dotted; padding:6px}
+
+.rank_box{line-height:25px; height:25px; border-bottom:1px dotted #f1f1f1; padding:5px;}
+.rank_box .f1{ float:left;width:10%;}
+.rank_box .f2{ float:left;width:40%; text-align:center}
+.rank_box .f3{ float:left;width:40%; text-align:center}
+
+.sign_img{ margin-right:20px;display:inline;float:left;width:114px;height:52px;overflow:hidden;cursor:pointer;background:url(sign_img.gif) right 2px no-repeat}
+.sign_img:hover{background-position:right -53px;text-decoration:none}
+.sign_img span{display:block;margin:5px 0 0 14px;font-size:16px;font-family:'Hiragino Sans GB','Microsoft YaHei',sans-serif !important;font-weight:700;color:#165379}
+.sign_img.current{background:url(sign_done.gif) no-repeat 0 2px;cursor:default}
+
+.ro_box{position:fixed; right:3px; bottom:3px; width:300px; height:auto; background-color:#FFFFFF; border:1px solid #ccc}
+.ro_box .tit{ background:#f1f1f1; border-bottom:1px solid #ccc; padding:3px;}
+.ro_box .ann_list{padding:8px 0;}
+
+.lo_box{position:fixed; left:3px; bottom:3px; width:300px; height:auto; background-color:#FFFFFF; border:1px solid #ccc}
+.lo_box .tit{ background:#0595EC; border-bottom:1px solid #ccc; padding:3px; color:#FFFFFF}
+.lo_box ul{padding:0; margin:0}
+.lo_box li{padding:5px;}

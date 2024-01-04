@@ -1,0 +1,58 @@
+/**
+##
+#	Project: PHPDISK File Storage Solution
+#	This is NOT a freeware, use is subject to license terms.
+#
+#	Site: http://www.phpdisk.com
+#
+#	$Id: common.css 149 2015-09-04 08:41:10Z along $
+#
+#	Copyright (C) 2008-2015 PHPDisk Team. All Rights Reserved.
+#
+##
+*/
+
+.txtwhite{color:#FFFFFF}
+.txtblack{color:#000000}
+.txtgray{color:#666666}
+.txtgreen{ color:#008800}
+.txtred{ color:#FF0000}
+.txtblue{color:#0000FF}
+.f10{font-size:10px}
+.f12{font-size:12px}
+.f14{font-size:14px}
+.f16{font-size:16px}
+.f18{font-size:18px}
+.f20{font-size:20px}
+
+.down_box_tips{padding:20px 0px;}
+/* color btn */
+.color_btn { background:#f5f5f6;background:-webkit-gradient(linear,0 0,0 100%, from(#fff),to(#ecedee));background:-moz-linear-gradient(top, #fff,#ecedee);background:-ms-linear-gradient(top,#f4f4f4 0%, #fbfbfb 100%);background:linear-gradient(top,#f4f4f4 0%,#fbfbfb 100%);border:1px solid #e5e5e5; box-shadow:inset 0px 1px #fff;padding:5px 10px; outline:0;}
+.color_btn:hover { background:#efeeee; border-color:#d9d9d9;  }
+.btn_green{ border-color:#4e9e22; background-color:#60bc1d;vertical-align:-1px; *vertical-align:0 ; background:-webkit-gradient(linear,0 0,0 100%,from(#78c121),to(#5daa1d));background:-moz-linear-gradient(top,#78c121,#5daa1d);background:-ms-linear-gradient(top,#78c121 0%, #5daa1d 67%);background:linear-gradient(top,#78c121 0%,#5daa1d 100%);box-shadow:0 1px 0 #9dd35d inset;text-align: center;cursor:pointer; border-radius:2px;}
+.btn_green:hover{border-color:#4e9e22; background-color:#7dc825;background:-webkit-gradient(linear,0 0,0 100%,from(#74be21),to(#84d129));background:-moz-linear-gradient(top,#74be21,#84d129) ;background:-ms-linear-gradient(top,#74be21 0%, #84d129 67%);background:linear-gradient(top,#74be21 0%,#84d129 100%);}
+.btn_slive{border:1px solid #999; vertical-align:-1px; *vertical-align:0 ; background:#f9f8f9;background: -moz-linear-gradient(top,#fdfdfd,#f0f1f2); background: -webkit-gradient(linear, 0 0, 0 100%, from(#fdfdfd),to(#f0f1f2) ); background: -ms-linear-gradient(top,#fdfdfd 0%, #f0f1f2 100%);background: linear-gradient(top,#fdfdfd 0%,#f0f1f2 100%);box-shadow:inset 0 1px 0 #fff;text-align: center; cursor:pointer; border-radius:2px; }
+.btn_slive:hover{background:#fbfbfb; background:-moz-linear-gradient(top,#f0f1f1,#fff); background: -webkit-gradient(linear, 0 0, 0 100%, from(#f0f1f1),to(#fff)); background:-ms-linear-gradient(top,#f0f1f1 0%, #fff 100%);background: linear-gradient(top,#f0f1f1 0%,#fff 100%);}
+.btn_blue{border:1px solid #00a5e6;border-radius: 2px;-moz-border-radius: 2px;-webkit-border-radius: 2px;box-shadow: 0 1px 0 #52dcff inset;background-color:#1dcfff;background:-webkit-gradient(linear,0 0,0 100%,from(#26d5ff),to(#00b6fb));background:-moz-linear-gradient(top, #26d5ff,#00b6fb);background:-ms-linear-gradient(top,#26d5ff 0%, #00b6fb 67%);background:linear-gradient(top,#26d5ff 0%,#00b6fb 100%);display: inline-block;text-decoration: none;text-align: center;cursor: pointer;}
+.btn_blue:hover{border-color:#00a5e6;background-color:#36d6ff;background:-webkit-gradient(linear,0 0,0 100%,from(#10d0ff),to(#4adbff));background:-moz-linear-gradient(top, #10d0ff,#4adbff);background:-ms-linear-gradient(top,#10d0ff 0%, #4adbff 67%);background:linear-gradient(top,#10d0ff 0%,#4adbff 100%);}
+.btn_deep_blue{border: 1px solid #4168a5;background: #5c8ac0;border-radius: 2px;-moz-border-radius: 2px;-webkit-border-radius: 2px;box-shadow: 0 1px 0 #81a6d0 inset;background: -webkit-gradient(linear,0 0,0 100%,from(#6190c4),to(#4b73b0));background: -moz-linear-gradient(top,#6190c4,#4b73b0);background: -ms-linear-gradient(top,#6190c4 0,#4b73b0 67%);background: linear-gradient(top,#6190c4 0,#4b73b0 100%);display: inline-block;text-decoration: none;text-align: center;cursor: pointer;}
+.btn_deep_blue:hover{border-color: #4168a5;background-color: #6697cf;background: -webkit-gradient(linear,0 0,0 100%,from(#5785b8),to(#6ca1dd));background: -moz-linear-gradient(top,#5785b8,#6ca1dd);background: -ms-linear-gradient(top,#5785b8 0,#6ca1dd 67%);background: linear-gradient(top,#5785b8 0,#6ca1dd 100%)}
+.btn_orange{border: 1px solid #EA4C04;background: #FF7200;border-radius: 2px;-moz-border-radius: 2px;-webkit-border-radius: 2px;box-shadow: 0 1px 0 #FF8B00 inset;background: -webkit-gradient(linear,0 0,0 100%,from(#FF8B00),to(#EA4C04));background: -moz-linear-gradient(top,#FF8B00,#EA4C04);background: -ms-linear-gradient(top,#FF8B00 0,#EA4C04 67%);background: linear-gradient(top,#FF8B00 0,#EA4C04 100%);display: inline-block;text-decoration: none;text-align: center;cursor: pointer;}
+.btn_orange:hover{border-color: #EA4C04;background-color: #FF8B00;background: -webkit-gradient(linear,0 0,0 100%,from(#FF8B00),to(#FF7200));background: -moz-linear-gradient(top,#FF8B00,#FF7200);background: -ms-linear-gradient(top,#FF8B00 0,#FF7200 67%);background: linear-gradient(top,#FF8B00 0,#FF7200 100%)}
+/* color box */
+.box_bd1{ border:1px solid #FFF;}
+.box_bd2{ border:2px solid #FFF;}
+.box_bd3{ border:3px solid #FFF;}
+.box_bd4{ border:4px solid #FFF;}
+.box_green{border-color:#009900; background:#F7FFF7;}
+.box_red{border-color:#FA4103; background:#FFFDEE;}
+.box_gray{border-color:#CCC; background:#fafafa;}
+.box_l_green{border-color:#F6F6F6; background:#F7FFF7;}
+
+.phpdisk_box_cl{ border:2px solid #FF6600; background-color:#000033; color:#FFFFFF; padding:5px}
+.phpdisk_box_cl2{ border:2px solid #000; background-color:#ff6600; color:#000; padding:5px}
+
+.tb_box_msg{margin:8px;padding:10px; background:#FFFFDD; border:#FFCC00 1px solid; color:#008800}
+.tb_box_msg ul{padding:0; margin:0}
+.box_style{ background:#FFFFFF; color:#444444; padding:10px; font-size:12px;}
+.box_style li{height:22px; line-height:22px;}
