@@ -66,8 +66,8 @@ A:hover {
 /* multi upload*/
 .upload_style{ margin-bottom:8px;float:left}
 .upload_btn{float:left}
-#upload_btn{background:url("../../../images/upload.png"); width:52px; height:22px; border:0; cursor:pointer}
-#upload_btn a:hover{background:url("../../../images/upload2.png");}
+#upload_btn{background:url("static/img/upload.png"); width:52px; height:22px; border:0; cursor:pointer}
+#upload_btn a:hover{background:url("static/img/upload2.png");}
 #upl_detail{display:none; padding:8px; color:#252525}
 .up_tips{margin-top:120px; margin-left:140px; font-size:16px; color:#CCCCCC}
 
@@ -157,7 +157,7 @@ A:hover {
 	display: block;
 	height: 13px;
 	width: 13px;
-	background-image: url(../../../images/upload_cancel.gif);
+	background-image: url(static/img/upload_cancel.gif);
 	background-repeat: no-repeat;
 	background-position: -13px 0px;
 	float: right;

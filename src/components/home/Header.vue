@@ -8,15 +8,14 @@
 						<div class="brand">
 							<a href="http://www.xunniunwp.com/">
 								<img src="static/img/logo.png"
-									style="width: 180px; height: 60px;">
+									style="width: 120px; height: 60px;">
 							</a>
 						</div>
 						<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span
 								class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a>
 						<div class="nav-collapse collapse" id="top_menu">
 							<ul class="nav main-menu menu-left">
-								<li v-for="item  in items" :key="item.link" :class="currentactive == key ? '':'active'"
-								@click="checkPrice(key)"><a :href="item.link"  rel="nofollow">{{ item.message }}</a></li>
+								<li v-for="(item,index) of items" :key="index"><a :href="item.link"  rel="nofollow">{{ item.message }}</a></li>
 							</ul>
 							<ul class="nav pull-right main-menu">
 								<li><a data-placement="bottom" class="_tooltip" title="" href="account"
@@ -42,15 +41,10 @@ export default {
                 { message: '规则条款', 'link':"rule"},
                 { message: '联系我们', 'link':"contact"},
                 { message: '关于我们' , 'link':"about" }
- 
             ]
         }
 	},
 	methods:{
-		checkPrice(index) {
-			console.log(index)
-				this.currentactive = index;
-			}
 	}
 }
 </script>

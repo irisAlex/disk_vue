@@ -1,12 +1,13 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Vip from '@/components/Vip'
-import Login from '@/components/Login'
-import Down from '@/components/DownLoad'
-import About from '@/components/About'
-import Policy from '@/components/Policy'
-import Rule from '@/components/Rule'
-import Contact from '@/components/Contact'
+import Vip from '@/components/home/Vip'
+import Login from '@/components/home/Login'
+import Down from '@/components/home/DownLoad'
+import About from '@/components/home/About'
+import Policy from '@/components/home/Policy'
+import Rule from '@/components/home/Rule'
+import Contact from '@/components/home/Contact'
+import Disk from '@/components/admin/Disk'
 Vue.use(Router)
 
 export default new Router({
@@ -30,7 +31,7 @@ export default new Router({
 		path: '/account',
 		name: 'login-register',
 		components: {
-			login: Login
+			main: Login
 		}
 	},
 	{
@@ -44,7 +45,7 @@ export default new Router({
 		path: '/about',
 		name: 'about',
 		components: {
-			list: About
+			main: About
 		}
 	},
 	{
@@ -68,5 +69,35 @@ export default new Router({
 			main: Contact
 		}
 	},
+	{
+		path : '/dashboard',
+		name : 'dashboard',
+		components :{
+			main : Disk
+		},
+		meta: { 
+			requiresAuth: true 
+		}
+	},
+	{
+		path : '/manager',
+		name : 'manager',
+		components :{
+			main : Disk
+		},
+		meta: { 
+			requiresAuth: true 
+		}
+	},
+	{
+		path : '/upload',
+		name : 'upload',
+		components :{
+			main : Disk
+		},
+		meta: { 
+			requiresAuth: true 
+		}
+	}
   ]
 })
