@@ -114,9 +114,13 @@
 			</div>
 		</div>
 	</div>
+	
+	<foot></foot>
+	
 </template>
 
 <script>
+import Foot from './Foot.vue'
 export default {
 	name: 'PostList',
 	data() {
@@ -129,6 +133,9 @@ export default {
 		timeStyle(createTime) {
 			return String(createTime).match(/.{10}/)[0];
 		}
+	},
+	components: {
+		Foot
 	},
 	methods: {
 		getData() {
