@@ -4,7 +4,7 @@
             <div class="block">
                 <h3 class="block-title sub-title"><span>信息栏</span></h3>
                 <ul class="nav nav-list secondary-nav">
-                    <li id="ann_list"  v-for="(item , index) of items" :key="item.message" :class="currentIndex === index ? 'active' : ''"
+                    <li id="ann_list"  v-for="(item , index) of items" :key="item.message"
                     @click="checkPrice(index)">
                         <a :href="item.link"><i class="icon-chevron-right"></i>{{ item.message }}</a>
                       </li>

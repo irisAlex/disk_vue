@@ -5,7 +5,7 @@
 </template>
 <script>
 export default {
-    name: 'title',
+    name: 'caption',
     data() {
         return {
             

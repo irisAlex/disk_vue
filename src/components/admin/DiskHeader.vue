@@ -65,7 +65,7 @@ export default {
         return {
             items: [
                 { message: '首页', 'link': "dashboard" },
-                { message: '上传文件', 'link': "upload" },
+                { message: '上传文件', 'link': "vip" },
                 { message: '文件管理', 'link': "manager" },
             ],
             accountUser : localStorage.getItem('user')

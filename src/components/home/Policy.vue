@@ -2,7 +2,7 @@
     <div>
         <div id="highlighted">
             <div class="container">
-                <catalog catalogTitle="隐私政策" details="请仔细阅读下面的信息"></catalog>
+                <caption catalogTitle="隐私政策" details="请仔细阅读下面的信息"></caption>
             </div>
         </div>
         <div id="content">
@@ -41,7 +41,7 @@
 
 <script>
 import Side from './Side.vue'
-import Catalog from './Title.vue'
+import Caption from './Caption.vue'
 import Art from './Article.vue'
 export default {
     name: 'about',
@@ -99,7 +99,7 @@ export default {
     },
     components: {
         Side,
-        Catalog,
+        Caption,
         Art
     }
 }

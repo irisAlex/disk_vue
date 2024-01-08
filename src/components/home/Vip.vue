@@ -9,7 +9,6 @@
 					<div id="content">
 						<div class="container">
 							<div class="row-fluid">
-								<!-- Pricing -->
 								<div class="row-fluid margin-bottom-40">
 									<div class="span3 pricing hover-effect" style="width:200px">
 										<div class="pricing-head">
@@ -102,10 +101,6 @@
 										</div>
 									</div>
 								</div>
-
-								<!--/row-fluid-->
-								<!--//End Pricing -->
-
 							</div>
 						</div>
 					</div>
@@ -114,28 +109,18 @@
 			</div>
 		</div>
 	</div>
-	
-	<foot></foot>
-	
 </template>
 
 <script>
-import Foot from './Foot.vue'
 export default {
-	name: 'PostList',
+	name: 'vip',
 	data() {
-		return {
-			posts: {},
-			loading: false
-		}
+		return {}
 	},
 	filters: {
-		timeStyle(createTime) {
-			return String(createTime).match(/.{10}/)[0];
-		}
-	},
-	components: {
-		Foot
+		// timeStyle(createTime) {
+		// 	return String(createTime).match(/.{10}/)[0];
+		// }
 	},
 	methods: {
 		getData() {
@@ -159,8 +144,8 @@ export default {
 		}
 	},
 	beforeMount() {
-		this.loading = true;
-		this.getData();
+		// this.loading = true;
+		// this.getData();
 	}
 }
 </script>
@@ -178,10 +163,11 @@ export default {
 .center-me {
 	text-align: center;
 }
+
 </style>
 
 <script type="text/javascript">
 				buy_alert = function(){
 		ajerror("请先登录");
 	}
-			</script>
+</script>

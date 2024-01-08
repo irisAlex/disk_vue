@@ -1,5 +1,9 @@
 <template>
     <div>
+        <!-- <radial-progress-bar :diameter="200" :completed-steps="completedSteps" :total-steps="totalSteps">
+            <p>Total steps: {{ totalSteps }}</p>
+            <p>Completed steps: {{ completedSteps }}</p>
+        </radial-progress-bar> -->
         <div id="content">
             <div class="container">
                 <div class="alert alert-error hide" id="alertMsg">
@@ -27,7 +31,8 @@
                             <div class="control-group">
                                 <label class="control-label" for="inputPassword">密码</label>
                                 <div class="controls" style="text-align: left;">
-                                    <input type="password" id="inputPassword" name="password" placeholder="密码" v-model="pwd">
+                                    <input type="password" id="inputPassword" name="password" placeholder="密码"
+                                        v-model="pwd">
                                 </div>
                             </div>
 
@@ -61,16 +66,14 @@
                                 <label class="control-label" for="r_username">用户名</label>
                                 <div class="controls" style="text-align: left;">
                                     <input type="text" id="r_username" name="username" placeholder="用户名" value=""
-                                        maxlength="20" @on-blur="chk_username();" v-model="username"><span class="txtred"
-                                        id="e_username">&nbsp;</span>
+                                        maxlength="20" v-model="username"><span class="txtred" id="e_username">&nbsp;</span>
                                 </div>
                             </div>
                             <div class="control-group">
                                 <label class="control-label" for="r_email">邮箱</label>
                                 <div class="controls" style="text-align: left;">
                                     <input type="text" name="email" placeholder="邮箱" id="r_email" value="" maxlength="50"
-                                        v-model="email" @blur="chk_email" class="txtred"><span class="txtred"
-                                        id="e_email">&nbsp;</span>
+                                        v-model="email" class="txtred"><span class="txtred" id="e_email">&nbsp;</span>
                                 </div>
                             </div>
 
@@ -96,33 +99,43 @@
     </div>
 </template>
 <script>
+//import RadialProgressBar from 'vue-radial-progress'
 export default {
     name: 'Login',
     data() {
         return {
-            username : "",
-            password : "",
-            email : "",
-            user : "",
-            pwd : ""
+            username: "",
+            password: "",
+            email: "",
+            user: "",
+            pwd: "",
+            completedSteps: 0,
+            totalSteps: 10
         }
     },
     computed: {
 
     },
+    components: {
+       // RadialProgressBar
+    },
     methods: {
         chk_email() {
             const regEmail = /^([a-zA-Z]|[0-9])(\w|\-)+@[a-zA-Z0-9]+\.([a-zA-Z]{2,4})$/;
-            if (regEmail.test(this.email)) {
+            if (!regEmail.test(this.email)) {
                 // 合法的邮箱
+                ajerror('邮箱地址不合法，请输入合法的邮箱');
+                $("#alertMsg").show();
+                $('#e_email').addClass('txtred');
                 return
             }
-
-            ajerror('请输入合法的邮箱');
-            $("#alertMsg").show();
-            $('#e_email').addClass('txtred');
         },
         login() {
+            if (this.user == '' || this.pwd == '') {
+                ajerror('请输入正确的用户名和密码');
+                $("#alertMsg").show();
+                return
+            }
             this.$http({
                 url: `http://127.0.0.1:8088/login`,   //ES6语法，引入组件内的 route object（路由信息对象） 
                 method: 'post',
@@ -132,11 +145,13 @@ export default {
                 })
             }).then((response) => {
                 if (response.status === 200) {
-                    localStorage.setItem('user',response.data.user)
+                    localStorage.setItem('user', response.data.user)
                     localStorage.setItem('token', response.data.token);
-                   this.$router.push('dashboard');
+                    this.$router.push('dashboard');
                 }
             }).catch(function (error) {
+                ajerror('用户名或密码错误，请确认后登陆');
+                $("#alertMsg").show();
                 console.log(error);
             });
         },
@@ -144,8 +159,23 @@ export default {
             if (!$("#termandservice").is(':checked')) {
                 ajerror("请阅读并确认网站服务条款。");
                 $("#alertMsg").show();
-
+                return
             }
+            const regEmail = /^([a-zA-Z]|[0-9])(\w|\-)+@[a-zA-Z0-9]+\.([a-zA-Z]{2,4})$/;
+            if (this.username == '' || this.password == '' || this.email == '') {
+                ajerror('请输入正确的注册信息');
+                $("#alertMsg").show();
+                return
+            }
+
+            if (!regEmail.test(this.email)) {
+                // 合法的邮箱
+                ajerror('邮箱地址不合法，请输入合法的邮箱');
+                $("#alertMsg").show();
+                $('#e_email').addClass('txtred');
+                return
+            }
+
             this.$http({
                 url: `http://127.0.0.1:8088/register`,   //ES6语法，引入组件内的 route object（路由信息对象） 
                 method: 'post',
@@ -155,20 +185,21 @@ export default {
                     email: this.email
                 })
             }).then((response) => {
-                console.log(response)
                 if (response.status === 200) {
-                    localStorage.setItem('user',response.data.user)
+                    localStorage.setItem('user', response.data.user)
                     localStorage.setItem('token', response.data.token);
-                   this.$router.push('dashboard');
+                    this.$router.push('dashboard');
                 }
             }).catch(function (error) {
+                ajerror('注册失败');
+                $("#alertMsg").show();
                 console.log(error);
             });
         },
 
     },
     beforeMount() {
-        this.loading = true;
+        // this.loading = true;
         // this.getData();
     },
     watch: {

@@ -2,7 +2,7 @@
     <div>
         <div id="highlighted">
             <div class="container">
-                <catalog catalogTitle="关于我们" details="关于我们的一些详细信息"></catalog>
+                <caption catalogTitle="关于我们" details="关于我们的一些详细信息"></caption>
             </div>
         </div>
         <div id="content">
@@ -27,14 +27,13 @@
 
             </div>
         </div>
-
     </div>
 </template>
 
 
 <script>
 import Side from './Side.vue'
-import Catalog from './Title.vue'
+import Caption from './Caption.vue'
 import Art from './Article.vue'
 export default {
     name: 'about',
@@ -92,9 +91,81 @@ export default {
     },
     components: {
         Side,
-        Catalog,
+        Caption,
         Art
     }
 }
 </script> 
-    
+
+#footer1 {
+	background-color: #2c2c2c;
+	background-image: -moz-linear-gradient(top, #313131, #242424);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#313131), to(#242424));
+	background-image: -webkit-linear-gradient(top, #313131, #242424);
+	background-image: -o-linear-gradient(top, #313131, #242424);
+	background-image: linear-gradient(to bottom, #313131, #242424);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff313131', endColorstr='#ff242424', GradientType=0);
+	color: #CFCFCF;
+	border-top: 0px solid #377ca8
+}
+
+#footer1 .inner {
+	padding: 0px 0;
+	background: url(../../../static/img/logo.png) left top repeat
+}
+
+#footer1 h3 {
+	font-size: 1.2em;
+	color: rgba(255, 255, 255, 0.8)
+}
+
+#footer1 a {
+	color: #CFCFCF
+}
+
+#footer1 .social-media a {
+	text-decoration: none;
+	color: rgba(255, 255, 255, 0.8);
+	display: block;
+	margin-bottom: 0.4em;
+	line-height: 30px
+}
+
+#footer1 .social-media a i {
+	font-size: 24px;
+	background: #CFCFCF;
+	background: rgba(255, 255, 255, 0.6);
+	color: #000;
+	padding: 0;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	margin-right: 0.2em
+}
+
+#footer1 .social-media a:hover {
+	text-decoration: none;
+	color: #fff
+}
+
+#footer1 .social-media a:hover i {
+	background: #fff
+}
+
+#footer1 .social-media a.last {
+	padding-bottom: 0;
+	border-bottom: 0
+}
+
+#footer1 .contact-block p {
+	margin-bottom: 0.5em
+}
+
+#footer1 .subfooter {
+	border-top: 1px solid rgba(255, 255, 255, 0.1);
+	margin-top: 1em;
+	padding-top: 1em
+}
+</style> -->

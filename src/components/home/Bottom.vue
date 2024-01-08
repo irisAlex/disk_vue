@@ -1,13 +1,14 @@
 <template>
-    <div id="footer">
+    <div id="footer1">
         <div class="inner">
             <div class="container">
                 <div class="subfooter">
                     <div style="text-align:center">
                         <p>
                         </p>
-                        <p>Copyright ©- 2023 xunniun网盘 服务邮箱：<a target="_blank" href="mailto:xunniun@gmail.com"><span
-                                    style="font-family:Microsoft YaHei">xunniun@gmail.com</span></a></p>
+                        <p style="height: 30px;font-size:18px;font-family:Microsoft YaHei">Copyright © - 2023 xunniun网盘   服务邮箱: <a target="_blank"
+                                href="mailto:xunniun@gmail.com"><span style="font-family:Microsoft YaHei;color:black;font-weight:100px">xunniun@gmail.com</span></a>
+                        </p>
                         <p></p>
                     </div>
                 </div>
@@ -15,9 +16,11 @@
         </div>
     </div>
 </template>
+
+
 <script>
 export default {
-    name: 'foot',
+    name: 'bottom',
     data() {
         return {
 

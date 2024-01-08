@@ -2,7 +2,7 @@
     <div>
         <div id="highlighted">
             <div class="container">
-                <catalog catalogTitle="规则条款" details="关于使用xunniun 网盘的规则条款"></catalog>
+                <caption catalogTitle="规则条款" details="关于使用xunniun 网盘的规则条款"></caption>
             </div>
         </div>
         <div id="content">
@@ -64,10 +64,10 @@
 
 <script>
 import Side from './Side.vue'
-import Catalog from './Title.vue'
+import Caption from './Caption.vue'
 import Art from './Article.vue'
 export default {
-    name: 'about',
+    name: 'rule',
     data() {
         return {
 
@@ -122,7 +122,7 @@ export default {
     },
     components: {
         Side,
-        Catalog,
+        Caption,
         Art
     }
 }
