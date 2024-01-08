@@ -20,7 +20,8 @@ import axios from "axios";
 //   // 在最后必须 return config
 //   return config;
 // });
-
+//axios.defaults.baseURL='/api'
+axios.defaults.baseURL = "/api"
 Vue.prototype.$http = axios;
 /* eslint-disable no-new */
 new Vue({

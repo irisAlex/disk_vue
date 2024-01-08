@@ -137,7 +137,7 @@ export default {
                 return
             }
             this.$http({
-                url: `http://8.140.252.134:8088/login`,   //ES6语法，引入组件内的 route object（路由信息对象） 
+                url: `/login`,   //ES6语法，引入组件内的 route object（路由信息对象） 
                 method: 'post',
                 data: JSON.stringify({
                     user: this.user,
@@ -177,7 +177,7 @@ export default {
             }
 
             this.$http({
-                url: `http://8.140.252.134:8088/register`,   //ES6语法，引入组件内的 route object（路由信息对象） 
+                url: `/register`,   //ES6语法，引入组件内的 route object（路由信息对象） 
                 method: 'post',
                 data: JSON.stringify({
                     user: this.username,
