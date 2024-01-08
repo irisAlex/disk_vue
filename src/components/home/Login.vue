@@ -42,7 +42,7 @@
                                     <input type="checkbox" name="remember" value="0"> <span
                                         style="font-size:16px;">保持登录状态</span></label><a
                                     href="account.php?action=forget_pwd"></a><a
-                                    href="http://www.xunniuwp.com/about.php?action=contactus">忘记密码？</a>
+                                    href="#">忘记密码？</a>
                             </div>
 
                             <button type="button" class="btn btn-primary btn-large" id="login_btn"
@@ -137,7 +137,7 @@ export default {
                 return
             }
             this.$http({
-                url: `http://172.17.36.168:8088/login`,   //ES6语法，引入组件内的 route object（路由信息对象） 
+                url: `http://8.140.252.134:8088/login`,   //ES6语法，引入组件内的 route object（路由信息对象） 
                 method: 'post',
                 data: JSON.stringify({
                     user: this.user,
@@ -177,7 +177,7 @@ export default {
             }
 
             this.$http({
-                url: `http://172.17.36.168:8088/register`,   //ES6语法，引入组件内的 route object（路由信息对象） 
+                url: `http://8.140.252.134:8088/register`,   //ES6语法，引入组件内的 route object（路由信息对象） 
                 method: 'post',
                 data: JSON.stringify({
                     user: this.username,

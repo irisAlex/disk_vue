@@ -14,7 +14,7 @@
                     <div class="panel-heading">账户概览</div>
                     <div class="panel-body">
                         <ul style="margin-left:0px;">
-                            <a href="http://www.xunniuwp.com/mydisk.php?item=profile&amp;menu=pwd&amp;action=mod_pwd"><span
+                            <a href="#"><span
                                     style="font-size:18px;color:#337FE5;"><strong>若共享账户密码被修改无法找回</strong></span></a>
                             <li style="line-height: 35px;"><b>用户名</b>：alex123456 <a href="vip.php" title="VIP"><img
                                         src="images/vip.gif" align="absmiddle" border="0"

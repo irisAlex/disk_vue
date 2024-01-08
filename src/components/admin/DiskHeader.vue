@@ -3,7 +3,7 @@
         <div class="navbar-inner">
             <div id="ie_tips" style="display:none"></div>
             <div class="container-fluid" style="height: 80px;margin-bottom:0">
-                <a class="brand" href="http://www.xunniuwp.com/"><img src="static/img/logo.png"
+                <a class="brand" href="#"><img src="static/img/logo.png"
                     style="width: 120px; height: 60px;"></a>
                 <ul class="nav1 main-menu menu-left">
                     <li v-for="item in items" :key="item.key" >

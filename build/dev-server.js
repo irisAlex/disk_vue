@@ -84,6 +84,15 @@ var server = app.listen(port)
 
 module.exports = {
   ready: readyPromise,
+  // proxyTable: {
+  //   '/api': {
+  //     target: 'http://127.0.0.1:8088',
+  //     changeOrigin: true,
+  //     pathRewrite: {
+  //       '^/api': ''
+  //     }
+  //   }
+  },
   close: () => {
     server.close()
   }

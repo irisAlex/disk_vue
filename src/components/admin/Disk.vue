@@ -32,7 +32,7 @@ export default {
     methods: {
         verifyToken() {
             this.$http({
-                url: `http://127.0.0.1:8088/verify`,   //ES6语法，引入组件内的 route object（路由信息对象） 
+                url: `http://8.140.252.134:8088/verify`,   //ES6语法，引入组件内的 route object（路由信息对象） 
                 method: 'post',
                 data: JSON.stringify({
                     Token: localStorage.getItem('token')
