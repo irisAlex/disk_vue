@@ -66,6 +66,7 @@ export default {
                 { message: '首页', 'link': "dashboard" },
                 { message: '上传文件', 'link': "upload" },
                 { message: '文件管理', 'link': "manager" },
+                { message: '下载', 'link': "down" }
             ],
             accountUser: localStorage.getItem('user'),
             sideMenuList: []
@@ -81,8 +82,8 @@ export default {
             switch (s) {
                 case 'dashboard':
                     this.sideMenuList = [
-                        { message: '会员中心', link: "dashboard" },
-                        { message: '站内信息', link: "email" }
+                        { message: '会员中心', link: "dashboard" }
+                        // { message: '站内信息', link: "email" }
                     ]
                     break;
                 case 'upload':

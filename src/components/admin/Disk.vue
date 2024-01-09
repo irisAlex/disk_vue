@@ -72,7 +72,7 @@ export default {
             // 模拟数据加载
             setTimeout(() => {
                 this.loading = false;
-                this.verifyToken()
+               // this.verifyToken()
             }, 1000);
         }
     },
@@ -83,6 +83,7 @@ export default {
         Member
     },
     mounted() {
+        this.verifyToken()
         this.load()
     },
     beforeMount() {
