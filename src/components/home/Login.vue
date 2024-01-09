@@ -86,7 +86,7 @@
                             </div>
                             <label class="checkbox">
                                 <input type="checkbox" id="termandservice" style="margin-top: 3px;"> 我同意 <a target="_blank"
-                                    href="about.php?action=protocol">网站服务条款</a>
+                                    href="rule">网站服务条款</a>
                             </label>
                             <button type="button" class="btn btn-success btn-large" id="reg_btn" @click="register()"
                                 style="margin-top: 40px;">立即注册</button>
