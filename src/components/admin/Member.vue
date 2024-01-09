@@ -17,21 +17,20 @@
                             <li style="line-height: 35px;"><b>用户名</b>：{{userName}} <a href="vip.php" title="VIP"></a> <b
                                     style="margin-left: 20px;">当前网赚套餐：</b>1</li>
                             <li style="line-height: 35px;"><b>VIP结束时间</b>：<span
-                                    class="txt_r">2024-01-11</span>&nbsp;&nbsp;<a href="vip.php">购买/续费VIP</a></li>
-                            <li style="line-height: 35px;" class="clear"><b>个人主页</b>：<input type="text" class="span8"
-                                    size="50" id="myspace_url" value="http://www.xunniuwp.com/space_alex123456.html"
+                                    class="txt_r">2024-01-11</span>&nbsp;&nbsp;<a href="vip">购买/续费VIP</a></li>
+                            <!-- <li style="line-height: 35px;" class="clear"><b>个人主页</b>：<input type="text" class="span8"
+                                    size="50" id="myspace_url" value=""
                                     onclick="$('#myspace_url').select();ie_copy_text('myspace_url','个人主页链接复制成功');"
                                     readonly=""><input type="button" value="复制链接"
                                     onclick="$('#myspace_url').select();ie_copy_text('myspace_url','个人主页链接复制成功');"
-                                    class="btn btn-small"></li>
+                                    class="btn btn-small"></li> -->
                             <li style="line-height: 35px;"><b>联系邮箱</b>：libin_kongjie@126.com</li>
-                            <li style="line-height: 35px;"><b>可提现金额</b>：<span class="txt_r">￥0</span>&nbsp;&nbsp;<a
+                            <!-- <li style="line-height: 35px;"><b>可提现金额</b>：<span class="txt_r">￥0</span>&nbsp;&nbsp;<a
                                     href="mydisk.php?item=profile&amp;menu=income&amp;action=to_income">【申请提现】</a>&nbsp;<a
-                                    href="pay.php"></a></li>
+                                    href="pay.php"></a></li> -->
                             <li style="line-height: 35px;"><b>占用空间</b>：<span id="myspace_stat">
-                                    B</span>/<b>不限</b>&nbsp;&nbsp;<a href="javascript:myspace_stat();" title="更新"><img
-                                        src="images/reload.gif" align="absmiddle" border="0"></a></li>
-                            <li style="line-height: 35px;"><b>文件违规举报</b>：xunniu@outlook.com</li>
+                                    B</span>/<b>不限</b>&nbsp;&nbsp;<a href="javascript:myspace_stat();" title="更新"></a></li>
+                            <li style="line-height: 35px;"><b>文件违规举报</b>：xunniun@gmail.com</li>
 
                         </ul>
                     </div>

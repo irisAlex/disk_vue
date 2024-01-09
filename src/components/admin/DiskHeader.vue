@@ -33,12 +33,12 @@
                             <span id="user_info"><small>{{ accountUser }}</small>欢迎回来</span><i
                                 class="icon-caret-down"></i></a>
                         <ul class="pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-closer" id="user_menu">
-                            <li><a href="mydisk.php?item=profile&menu=cp"><i class="icon-home"></i> 会员中心</a></li>
-                            <li><a href="mydisk.php?item=profile&menu=file&action=files"><i class="icon-list"></i> 文件管理</a>
+                            <li><a href="dashboard"><i class="icon-home"></i> 会员中心</a></li>
+                            <li><a href="manageer"><i class="icon-list"></i> 文件管理</a>
                             </li>
-                            <li><a href="mydisk.php?item=profile&menu=upload&action=multi_upload"> <i
+                            <li><a href="upload"> <i
                                         class="icon-cloud-upload"></i> 上传文件</a></li>
-                            <li><a href="space_alex123456.html"> <i class="icon-hdd"></i> 网盘空间</a></li>
+                            <!-- <li><a href="space_alex123456.html"> <i class="icon-hdd"></i> 网盘空间</a></li> -->
                             <li class="divider"></li>
                             <li><a href="#" @click="quit"><i class="icon-off"></i> 安全退出</a></li>
                         </ul>
