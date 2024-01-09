@@ -95,11 +95,19 @@ export default {
                         { message: '文件管理', 'link': "manager" }
                     ]
                     break;
+                default:
+                    this.sideMenuList = [
+                        { message: '会员中心', link: "dashboard" },
+                        { message: '站内信息', link: "email" }
+                    ]
 
             }
             localStorage.setItem("sideMenu", JSON.stringify(this.sideMenuList))
         }
-    }
+    },
+    mounted() {
+        this.setSideMenu('')
+    },
 }
 </script>
 
