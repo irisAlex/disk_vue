@@ -14,11 +14,8 @@
                     <div class="panel-heading">账户概览</div>
                     <div class="panel-body">
                         <ul style="margin-left:0px;">
-                            <a href="#"><span
-                                    style="font-size:18px;color:#337FE5;"><strong>若共享账户密码被修改无法找回</strong></span></a>
-                            <li style="line-height: 35px;"><b>用户名</b>：alex123456 <a href="vip.php" title="VIP"><img
-                                        src="images/vip.gif" align="absmiddle" border="0"
-                                        class="vip_icon"></a>，<b>当前网赚套餐：</b>1</li>
+                            <li style="line-height: 35px;"><b>用户名</b>：{{userName}} <a href="vip.php" title="VIP"></a> <b
+                                    style="margin-left: 20px;">当前网赚套餐：</b>1</li>
                             <li style="line-height: 35px;"><b>VIP结束时间</b>：<span
                                     class="txt_r">2024-01-11</span>&nbsp;&nbsp;<a href="vip.php">购买/续费VIP</a></li>
                             <li style="line-height: 35px;" class="clear"><b>个人主页</b>：<input type="text" class="span8"
@@ -44,26 +41,10 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">网站公告</div>
                     <div class="panel-body">
-                        <ul style="margin-left:0px;">
+                        <art content="   为响应国家政策，净化网络环境，我们坚决严厉打击利用xunniun网盘传播色情、淫秽、暴恐、盗版等侵权或不良信息；对于相关的不良信息及严重违规帐号，将采取全面清理、永久封禁的措施，并若涉及法律纠纷的条件下保留对该用户行使配合相关部门进行取证的权益。
 
-                            <li style="padding: 4px;"><a href="ann_list-1.html" target="_blank"><span
-                                        style="color:#E53333;font-size:18px;"><strong>净网2020 ·
-                                            严打不良信息传播行为</strong></span></a><span class="badge pull-right">2020-07-10</span>
-                            </li>
-
-                            <li style="padding: 4px;"><a href="ann_list-2.html" target="_blank"><span
-                                        style="font-size:18px;">每天支付一次</span></a><span
-                                    class="badge pull-right">2021-03-22</span></li>
-
-                            <li style="padding: 4px;"><a href="ann_list-3.html" target="_blank"><span
-                                        style="font-size:18px;">周二、周四、周六、周日双倍</span></a><span
-                                    class="badge pull-right">2020-08-13</span></li>
-
-                            <li style="padding: 4px;"><a href="ann_list-4.html" target="_blank"><span
-                                        style="font-size:18px;">关于出租共享账户</span></a><span
-                                    class="badge pull-right">2020-07-13</span></li>
-
-                        </ul>
+        再此呼吁大家对于侵权文件以及不良信息做到“三不原则”—不上传、不分享、不转存！请广大用户加强自律与监督，合法、合规使用迅牛网盘，与迅牛网络科技共同维护清朗的网络环境！">
+                        </art>
                     </div>
                 </div>
             </div>
@@ -72,12 +53,30 @@
 </template>
 
 <script>
+
+import Art from '../home/Article.vue'
 export default {
     name: 'member',
     data() {
-        return {}
+        return {
+            items: [
+                { message: '会员中心', link: "dashboard" },
+                { message: '站内信息', link: "email" }
+            ],
+            userName : localStorage.getItem('user')
+        }
     },
     components: {
+        Art
+    },
+    mounted() {
+      //  localStorage.setItem("sideMenu", JSON.stringify(this.items))
+    },
+    watch: {
+        $route() {
+            console.log(444)
+            //localStorage.setItem("sideMenu", JSON.stringify(this.items))
+        }
     }
 }
 </script>

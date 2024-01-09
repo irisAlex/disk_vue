@@ -3,10 +3,9 @@
         <div class="navbar-inner">
             <div id="ie_tips" style="display:none"></div>
             <div class="container-fluid" style="height: 80px;margin-bottom:0">
-                <a class="brand" href="#"><img src="static/img/logo.png"
-                    style="width: 120px; height: 60px;"></a>
+                <a class="brand" href="#"><img src="static/img/logo.png" style="width: 120px; height: 60px;"></a>
                 <ul class="nav1 main-menu menu-left">
-                    <li v-for="item in items" :key="item.key" >
+                    <li v-for="item in items" :key="item.key" @click="setSideMenu(item.link)">
                         <a :href="item.link">{{ item.message }}</a>
                     </li>
                 </ul>
@@ -30,8 +29,9 @@
                         </ul>
                     </li>
                     <li class="user-profile" style="background-color:f5f5f5">
-                        <a class="user-menu dropdown-toggle" href="#" data-toggle="dropdown">
-                            <span id="user_info"><small>{{accountUser}}</small>欢迎回来</span><i class="icon-caret-down"></i></a>
+                        <a class="user-menu dropdown-toggle" data-toggle="dropdown">
+                            <span id="user_info"><small>{{ accountUser }}</small>欢迎回来</span><i
+                                class="icon-caret-down"></i></a>
                         <ul class="pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-closer" id="user_menu">
                             <li><a href="mydisk.php?item=profile&menu=cp"><i class="icon-home"></i> 会员中心</a></li>
                             <li><a href="mydisk.php?item=profile&menu=file&action=files"><i class="icon-list"></i> 文件管理</a>
@@ -40,8 +40,7 @@
                                         class="icon-cloud-upload"></i> 上传文件</a></li>
                             <li><a href="space_alex123456.html"> <i class="icon-hdd"></i> 网盘空间</a></li>
                             <li class="divider"></li>
-                            <li><a href="#" @click="quit"><i
-                                        class="icon-off"></i> 安全退出</a></li>
+                            <li><a href="#" @click="quit"><i class="icon-off"></i> 安全退出</a></li>
                         </ul>
                     </li>
 
@@ -65,10 +64,11 @@ export default {
         return {
             items: [
                 { message: '首页', 'link': "dashboard" },
-                { message: '上传文件', 'link': "vip" },
+                { message: '上传文件', 'link': "upload" },
                 { message: '文件管理', 'link': "manager" },
             ],
-            accountUser : localStorage.getItem('user')
+            accountUser: localStorage.getItem('user'),
+            sideMenuList: []
         }
     },
     methods: {
@@ -76,6 +76,28 @@ export default {
             localStorage.removeItem('user');
             localStorage.removeItem('token');
             this.$router.push('vip')
+        },
+        setSideMenu(s) {
+            switch (s) {
+                case 'dashboard':
+                    this.sideMenuList = [
+                        { message: '会员中心', link: "dashboard" },
+                        { message: '站内信息', link: "email" }
+                    ]
+                    break;
+                case 'upload':
+                    this.sideMenuList = [
+                        { message: '文件上传', 'link': "upload" }
+                    ]
+                    break;
+                case 'manager':
+                    this.sideMenuList = [
+                        { message: '文件管理', 'link': "manager" }
+                    ]
+                    break;
+
+            }
+            localStorage.setItem("sideMenu", JSON.stringify(this.sideMenuList))
         }
     }
 }
@@ -90,30 +112,33 @@ export default {
     margin: 0 10px 0 10px;
     margin-top: 30px;
     padding: 0 10px 0 10px;
-  }
+}
 
-  .navbar .nav1.pull-right {
+.navbar .nav1.pull-right {
     float: right;
     margin-right: 0;
-  }
-  .navbar .nav1 > li {
+}
+
+.navbar .nav1>li {
     float: left;
-  }
-  .navbar .nav1 > li > a {
+}
+
+.navbar .nav1>li>a {
     float: none;
     padding: 10px 30px 10px;
     color: #000;
     text-decoration: none;
-  }
-  .navbar .nav1 .dropdown-toggle .caret {
+}
+
+.navbar .nav1 .dropdown-toggle .caret {
     margin-top: 8px;
-  }
-  .navbar .nav1 > li > a:focus,
-  .navbar .nav1 > li > a:hover {
+}
+
+.navbar .nav1>li>a:focus,
+.navbar .nav1>li>a:hover {
     color: #333;
     text-decoration: none;
     background-color: transparent;
-  }
-
+}
 </style>
 

@@ -110,9 +110,22 @@
 export default {
     name: 'manager',
     data() {
-        return {}
+        return {
+            items1: [
+                { message: '文件管理', 'link': "manager" }
+            ]
+        }
     },
     components: {
+    },
+    // mounted() {
+    //     localStorage.setItem("sideMenu", JSON.stringify(this.items))
+    // },
+    watch: {
+        $route() {
+            console.log(44444)
+           // localStorage.setItem("sideMenu", JSON.stringify(this.items1))
+        }
     }
 }
 </script>

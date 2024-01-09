@@ -21,10 +21,10 @@ export default {
     data() {
         return {
             items: [
-                { message: '隐私政策', 'link':"policy"},
-                { message: '规则条款', 'link':"rule"},
-                { message: '联系我们', 'link':"contact"},
-                { message: '关于我们' , 'link':"about" }
+                { message: '隐私政策', link:"policy"},
+                { message: '规则条款', link:"rule"},
+                { message: '联系我们', link:"contact"},
+                { message: '关于我们' , link:"about" }
  
             ]
         }

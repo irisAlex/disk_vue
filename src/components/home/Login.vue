@@ -1,9 +1,10 @@
 <template>
     <div>
-        <!-- <radial-progress-bar :diameter="200" :completed-steps="completedSteps" :total-steps="totalSteps">
-            <p>Total steps: {{ totalSteps }}</p>
-            <p>Completed steps: {{ completedSteps }}</p>
-        </radial-progress-bar> -->
+        <div v-if="loading" class="loading-overlay">
+            <div class="loader"></div>
+            <div v-if="loading">{{ data }}</div>
+        </div>
+        <!-- <div v-if="!loading && data">{{ data }}</div> -->
         <div id="content">
             <div class="container">
                 <div class="alert alert-error hide" id="alertMsg">
@@ -41,8 +42,7 @@
                                 <label class="checkbox">
                                     <input type="checkbox" name="remember" value="0"> <span
                                         style="font-size:16px;">保持登录状态</span></label><a
-                                    href="account.php?action=forget_pwd"></a><a
-                                    href="#">忘记密码？</a>
+                                    href="account.php?action=forget_pwd"></a><a href="#">忘记密码？</a>
                             </div>
 
                             <button type="button" class="btn btn-primary btn-large" id="login_btn"
@@ -99,7 +99,6 @@
     </div>
 </template>
 <script>
-//import RadialProgressBar from 'vue-radial-progress'
 export default {
     name: 'Login',
     data() {
@@ -109,15 +108,15 @@ export default {
             email: "",
             user: "",
             pwd: "",
-            completedSteps: 0,
-            totalSteps: 10
+            loading: false,
+            data: null,
+            path : null
         }
     },
     computed: {
 
     },
     components: {
-       // RadialProgressBar
     },
     methods: {
         chk_email() {
@@ -136,6 +135,8 @@ export default {
                 $("#alertMsg").show();
                 return
             }
+
+           // this.load()
             this.$http({
                 url: `/login`,   //ES6语法，引入组件内的 route object（路由信息对象） 
                 method: 'post',
@@ -147,7 +148,8 @@ export default {
                 if (response.status === 200) {
                     localStorage.setItem('user', response.data.user)
                     localStorage.setItem('token', response.data.token);
-                    this.$router.push('dashboard');
+                    this.path = 'dashboard'
+                    this.load()
                 }
             }).catch(function (error) {
                 ajerror('用户名或密码错误，请确认后登陆');
@@ -176,6 +178,7 @@ export default {
                 return
             }
 
+            this.load()
             this.$http({
                 url: `/register`,   //ES6语法，引入组件内的 route object（路由信息对象） 
                 method: 'post',
@@ -188,14 +191,24 @@ export default {
                 if (response.status === 200) {
                     localStorage.setItem('user', response.data.user)
                     localStorage.setItem('token', response.data.token);
-                    this.$router.push('dashboard');
+                    this.path = 'dashboard'
+                    this.load()
                 }
             }).catch(function (error) {
-                ajerror('注册失败');
+                ajerror('用户已经存在，注册失败');
                 $("#alertMsg").show();
                 console.log(error);
             });
         },
+        load() {
+            this.loading = true;
+            this.data = "正在登陆，请稍等..."
+            // 模拟数据加载
+            setTimeout(() => {
+                this.loading = false;
+                this.$router.push(this.path);
+            }, 1000);
+        }
 
     },
     beforeMount() {
@@ -209,4 +222,40 @@ export default {
     }
 }
 </script> 
+
+<style>
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loader {
+    border: 8px solid #f3f3f3;
+    /* Light grey */
+    border-top: 8px solid #3498db;
+    /* Blue */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+</style>
     

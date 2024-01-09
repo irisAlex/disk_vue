@@ -6,7 +6,7 @@
 				<div class="inner">
 					<div class="container">
 						<div class="brand">
-							<a href="http://www.xunniunwp.com/">
+							<a href="#">
 								<img src="static/img/logo.png" style="width: 120px; height: 60px;">
 							</a>
 						</div>

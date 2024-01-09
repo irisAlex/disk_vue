@@ -122,9 +122,24 @@
 export default {
     name: 'upload',
     data() {
-        return {}
+        return {
+            items2 :  [
+                { message: '文件上传', 'link':"upload"}
+            ]
+        }
     },
     components: {
+    },
+    // mounted() {
+    //     localStorage.setItem("sideMenu" , JSON.stringify(this.items))
+    //     console.log(88888)
+    // },
+    watch: {
+        $route() {
+           // localStorage.setItem("sideMenu", JSON.stringify(this.items))
+            console.log(99999)
+
+        }
     }
 }
 </script>
