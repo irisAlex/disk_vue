@@ -12,8 +12,8 @@
             </div>
         </div>
         <!--/page-header-->
-        <div style="padding:10px 0;">当前路径：<a href="mydisk.php?item=profile&amp;menu=file&amp;action=files">文件管理</a>» </div>
-        <div class="alert alert-danger"><img src="images/light.gif" align="absmiddle" border="0">选中批量编辑文件</div>
+        <div style="padding:10px 0;">当前路径：<a href="#">文件管理</a>» </div>
+        <div class="alert alert-danger">选中批量编辑文件</div>
         <div class="table-header hide file-control">
             <ul class="inline">
                 <li>已选中 <span class="selected_files_count"></span> 个文件 </li>
@@ -111,20 +111,13 @@ export default {
     name: 'manager',
     data() {
         return {
-            items1: [
-                { message: '文件管理', 'link': "manager" }
-            ]
         }
     },
     components: {
     },
-    // mounted() {
-    //     localStorage.setItem("sideMenu", JSON.stringify(this.items))
-    // },
     watch: {
         $route() {
-            console.log(44444)
-           // localStorage.setItem("sideMenu", JSON.stringify(this.items1))
+
         }
     }
 }

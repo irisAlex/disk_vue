@@ -15,22 +15,23 @@ export default {
     name: 'b_side',
     data() {
         return {
-            sideMenu: '',
             sideMenuList: []
         }
     },
     mounted() {
-        this.sideMenu = localStorage.getItem('sideMenu')
-        this.sideMenuList = JSON.parse(this.sideMenu);
+        // this.sideMenu = localStorage.getItem('sideMenu')
+        // this.sideMenuList = JSON.parse(this.sideMenu);
+    },
+    methods : {
+        getMenuList(list) {
+            this.sideMenuList = list;
+        }
     },
     watch: {
         $route() {
         }
     }
 }
-
-$('#m_cp').addClass('current');
-$('#n_').addClass('active');
 </script>
 
 

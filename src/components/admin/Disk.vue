@@ -1,30 +1,25 @@
 <template>
     <div>
         <div class="container-fluid" id="main-container">
-            <div class="alert alert-error hide" id="alertMsg">
-                <button type="button" onclick="$('#alertMsg').hide();" class="close">×</button>
-                <strong>错误!</strong> <span id="alert_content">提示信息。</span>
-            </div>
             <a href="#" id="menu-toggler"><span></span></a><!-- menu toggler -->
-            <side></side>
+            <cn-side ref="sideMenu"></cn-side>
             <div id="main-content" class="clearfix">
                 <div v-if="loading" class="loading-overlay">
                     <div class="loader"></div>
                     <div v-if="loading">{{ load_data }}</div>
                 </div>
-                <manager v-show="mg_show"></manager>
-                <upload v-show="ul_show"></upload>
-                <member v-show="mm_show"></member>
+                <cn-manager v-show="mg_show"></cn-manager>
+                <cn-upload v-show="ul_show"></cn-upload>
+                <cn-member v-show="mm_show"></cn-member>
             </div>
         </div>
     </div>
 </template>
-
 <script>
-import Side from './Side.vue'
-import Manager from './Manager.vue'
-import Upload from './Upload.vue'
-import Member from './Member.vue'
+import cnSide from '@/components/admin/Side'
+import cnManager from '@/components/admin/Manager'
+import cnMember from '@/components/admin/Member'
+import cnUpload from '@/components/admin/Upload'
 import router from '../../router'
 export default {
     name: 'disk',
@@ -34,7 +29,8 @@ export default {
             ul_show: false,
             mm_show: false,
             loading: false,
-            load_data : null
+            load_data : null,
+            sideMenuList : []
         }
     },
     methods: {
@@ -47,17 +43,9 @@ export default {
                 })
             }).then((response) => {
                 if (response.status === 200) {
-
-                    if (this.$route.name === "dashboard") {
-                        this.mm_show = true
-                    }
-                    if (this.$route.name === 'manager') {
-                        this.mg_show = true
-                    }
-
-                    if (this.$route.name === 'upload') {
-                        this.ul_show = true
-                    }
+                  //  console.log(44444)
+                    // ajsuccess("请先登陆，在访问。");
+                    // $("#alertMsg").show(); 
                 }
             }).catch(function (error) {
                 ajerror("请先登陆，在访问。");
@@ -74,25 +62,52 @@ export default {
                 this.loading = false;
                // this.verifyToken()
             }, 1000);
+        },
+        setSideMenuAndContainer() {
+            switch (this.$route.name) {
+                case 'dashboard':
+                    this.mm_show = true
+                    this.sideMenuList = [
+                        { message: '会员中心', link: "dashboard" }
+                    ]
+                    break;
+                case 'upload':
+                this.ul_show = true
+                    this.sideMenuList = [
+                        { message: '文件上传', 'link': "upload" }
+                    ]
+                    break;
+                case 'manager':
+                    this.mg_show = true
+                    this.sideMenuList = [
+                        { message: '文件管理', 'link': "manager" }
+                    ]
+                    break;
+                default:
+                this.mm_show = true
+                    this.sideMenuList = [
+                        { message: '会员中心', link: "dashboard" },
+                    ]
+
+            }
         }
     },
     components: {
-        Side,
-        Manager,
-        Upload,
-        Member
+        cnSide,
+        cnManager,
+        cnUpload,
+        cnMember
     },
     mounted() {
         this.verifyToken()
         this.load()
+        this.setSideMenuAndContainer()
+        this.$refs.sideMenu.getMenuList(this.sideMenuList)
     },
     beforeMount() {
-      //  this.verifyToken()
-
     },
     watch: {
         $route() {
-
         }
     }
 

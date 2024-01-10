@@ -31,6 +31,9 @@ module.exports = merge(baseWebpackConfig, {
       inject: true,
       favicon: 'favicon.ico'
     }),
-    new FriendlyErrorsPlugin()
+    new FriendlyErrorsPlugin(),
+    // new webpack.IgnorePlugin({
+    //   resourceRegExp: /\.html$/,
+    // }),
   ]
 })

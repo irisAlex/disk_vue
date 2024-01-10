@@ -58,10 +58,6 @@ export default {
     name: 'member',
     data() {
         return {
-            items: [
-                { message: '会员中心', link: "dashboard" },
-                { message: '站内信息', link: "email" }
-            ],
             userName : localStorage.getItem('user')
         }
     },
@@ -69,12 +65,10 @@ export default {
         Art
     },
     mounted() {
-      //  localStorage.setItem("sideMenu", JSON.stringify(this.items))
+        
     },
     watch: {
         $route() {
-            console.log(444)
-            //localStorage.setItem("sideMenu", JSON.stringify(this.items))
         }
     }
 }

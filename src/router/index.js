@@ -35,7 +35,7 @@ export default new Router({
 		}
 	},
 	{
-		path: '/down',
+		path: '/file-:id',
 		name: 'vip-down',
 		components: {
 			main: Down

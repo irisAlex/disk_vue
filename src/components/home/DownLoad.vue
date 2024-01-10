@@ -6,8 +6,8 @@
           <div class="page-header position-relative">
             <div class="row-fluid">
               <div class="span6">
-                <h1>DXSHJCSTKS_01-46_PDF.rar</h1>
-                <div class="header_content">文件大小：296.24 M&nbsp; &nbsp;</div>
+                <!-- <h1>DXSHJCSTKS_01-46_PDF.rar</h1>
+                <div class="header_content">文件大小：296.24 M&nbsp; &nbsp;</div> -->
                 <br>
                 <div class="header_content">
                   文件: 免费&nbsp;&nbsp;&nbsp;上传时间：隐藏 </div>
@@ -67,9 +67,9 @@
                       <div>
 
 
-                        <div id="down_link"><a href="down-4223602.html" rel="nofollow"
+                        <div id="down_link"><a :href="downLink" rel="nofollow"
                             title="进入DXSHJCSTKS_01-46_PDF.rar下载页面"
-                            class="down_now"><span>进入DXSHJCSTKS_01-46_PDF.rar下载页面</span></a></div>
+                            class="down_now" ><span>进入DXSHJCSTKS_01-46_PDF.rar下载页面</span></a></div>
 
                         <div class="clear"></div>
                       </div>
@@ -173,7 +173,9 @@ export default {
         {title:'最高单价，绝不扣量',describe:'万次下载最高1600元，保证不扣1分量。',down:'feature-4-b',up:'feature-4-a'},
         {title:'7x12小时客户服务',describe:'本站提供 7x12 客户服务，快速解决问题',down:'feature-5-b',up:'feature-5-a'},
         {title:'专业专注，不断进步',describe:'超过50项全新改变，熟悉而又新奇，专注云储存服务，依然简洁，更不简单。',down:'feature-6-b',up:'feature-6-a'}
-      ]
+      ],
+      downLink : '',
+      randomNumber: 0
     };
   },
   filters: {
@@ -182,25 +184,52 @@ export default {
     },
   },
   methods: {
-    getData() {
-      // this.$http({
-      // 	url: 'https://cnodejs.org/api/v1/topics',
-      // 	method: 'get',
-      // 	params: {
-      // 		page: 1,
-      // 		limit: 20,
-      // 	}
-      // })
-      // 	.then((response) => {
-      // 		if (response.data.success === true) {
-      // 			this.posts = response.data.data;
-      // 			this.loading = true;
-      // 		}
-      // 	})
-      // 	.catch(function (error) {
-      // 		console.log(error);
-      // 	});
+    downData() {
+      console.log(this.$route.params)
+
+      this.$http({
+      	url: `/downloadFile?file_id=`+ this.$route.params.id,
+      	method: 'get',
+      	data: null
+      })
+      	.then((res) => {
+      		if (res.status === 200) {
+            const link = res.data.content.split('|')
+            if (link.length <= 1) {
+                  ajsuccess("资源不存在");
+                  $("#alertMsg").show(); 
+                  return
+            }
+            this.randomNumber = Math.floor(Math.random() * 5) + 1
+            this.downLink = link[this.randomNumber]
+      		}
+      	})
+      	.catch(function (error) {
+      		console.log(error);
+      	});
     },
+    getFileName () {
+      this.$http({
+      	url: 'http://www.xunniuwp.com/file-4223602.html',
+      	method: 'get',
+      	data: null
+      })
+      	.then((res) => {
+          console.log(res)
+      		// if (res.status === 200) {
+          //   const link = res.data.content.split('|')
+          //   this.downLink = link[1]
+          //   console.log(link[1])
+      		// }
+      	})
+      	.catch(function (error) {
+      		console.log(error);
+      	});
+    }
+  },
+  mounted() {
+   this.downData()
+   // this.getFileName()
   },
   beforeMount() {
 

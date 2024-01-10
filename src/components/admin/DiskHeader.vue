@@ -5,7 +5,7 @@
             <div class="container-fluid" style="height: 80px;margin-bottom:0">
                 <a class="brand" href="#"><img src="static/img/logo.png" style="width: 120px; height: 60px;"></a>
                 <ul class="nav1 main-menu menu-left">
-                    <li v-for="item in items" :key="item.key" @click="setSideMenu(item.link)">
+                    <li v-for="item in items" :key="item.key">
                         <a :href="item.link">{{ item.message }}</a>
                     </li>
                 </ul>
@@ -68,8 +68,7 @@ export default {
                 { message: '文件管理', 'link': "manager" },
                 { message: '下载', 'link': "down" }
             ],
-            accountUser: localStorage.getItem('user'),
-            sideMenuList: []
+            accountUser : localStorage.getItem('user')
         }
     },
     methods: {
@@ -78,36 +77,8 @@ export default {
             localStorage.removeItem('token');
             this.$router.push('vip')
         },
-        setSideMenu(s) {
-            switch (s) {
-                case 'dashboard':
-                    this.sideMenuList = [
-                        { message: '会员中心', link: "dashboard" }
-                        // { message: '站内信息', link: "email" }
-                    ]
-                    break;
-                case 'upload':
-                    this.sideMenuList = [
-                        { message: '文件上传', 'link': "upload" }
-                    ]
-                    break;
-                case 'manager':
-                    this.sideMenuList = [
-                        { message: '文件管理', 'link': "manager" }
-                    ]
-                    break;
-                default:
-                    this.sideMenuList = [
-                        { message: '会员中心', link: "dashboard" },
-                        { message: '站内信息', link: "email" }
-                    ]
-
-            }
-            localStorage.setItem("sideMenu", JSON.stringify(this.sideMenuList))
-        }
     },
     mounted() {
-        this.setSideMenu('')
     },
 }
 </script>
