@@ -98,6 +98,16 @@ export default new Router({
 		meta: { 
 			requiresAuth: true 
 		}
+	},
+	{
+		path : '/exchange',
+		name : 'exchange',
+		components :{
+			main : Disk
+		},
+		meta: { 
+			requiresAuth: true 
+		}
 	}
   ]
 })

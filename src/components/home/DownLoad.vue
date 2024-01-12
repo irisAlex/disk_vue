@@ -190,7 +190,7 @@ export default {
               return
       } 
       this.$http({
-        url: `/downloadFile?file_id=` + this.$route.params.id,
+        url: `/download_file?file_id=` + this.$route.params.id,
         method: 'get',
         data: null,
         headers: { // 添加自定义的 HTTP 头

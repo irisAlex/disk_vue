@@ -11,6 +11,7 @@
                 <cn-manager v-show="mg_show"></cn-manager>
                 <cn-upload v-show="ul_show"></cn-upload>
                 <cn-member v-show="mm_show"></cn-member>
+                <cn-exchange v-show="ex_show"></cn-exchange>
             </div>
         </div>
     </div>
@@ -20,6 +21,7 @@ import cnSide from '@/components/admin/Side'
 import cnManager from '@/components/admin/Manager'
 import cnMember from '@/components/admin/Member'
 import cnUpload from '@/components/admin/Upload'
+import cnExchange from '@/components/admin/Exchange'
 import router from '../../router'
 export default {
     name: 'disk',
@@ -29,8 +31,9 @@ export default {
             ul_show: false,
             mm_show: false,
             loading: false,
-            load_data : null,
-            sideMenuList : []
+            ex_show: false,
+            load_data: null,
+            sideMenuList: []
         }
     },
     methods: {
@@ -43,7 +46,7 @@ export default {
                 })
             }).then((response) => {
                 if (response.status === 200) {
-                  //  console.log(44444)
+                    //  console.log(44444)
                     // ajsuccess("请先登陆，在访问。");
                     // $("#alertMsg").show(); 
                 }
@@ -60,7 +63,7 @@ export default {
             // 模拟数据加载
             setTimeout(() => {
                 this.loading = false;
-               // this.verifyToken()
+                // this.verifyToken()
             }, 1000);
         },
         setSideMenuAndContainer() {
@@ -72,19 +75,25 @@ export default {
                     ]
                     break;
                 case 'upload':
-                this.ul_show = true
+                    this.ul_show = true
                     this.sideMenuList = [
-                        { message: '文件上传', 'link': "upload" }
+                        { message: '文件上传', link: "upload" }
                     ]
                     break;
                 case 'manager':
                     this.mg_show = true
                     this.sideMenuList = [
-                        { message: '文件管理', 'link': "manager" }
+                        { message: '文件管理', link: "manager" }
+                    ]
+                    break;
+                case 'exchange':
+                    this.ex_show = true
+                    this.sideMenuList = [
+                        { message: '兑换码', link: "exchange" }
                     ]
                     break;
                 default:
-                this.mm_show = true
+                    this.mm_show = true
                     this.sideMenuList = [
                         { message: '会员中心', link: "dashboard" },
                     ]
@@ -96,7 +105,8 @@ export default {
         cnSide,
         cnManager,
         cnUpload,
-        cnMember
+        cnMember,
+        cnExchange
     },
     mounted() {
         this.verifyToken()
@@ -147,4 +157,5 @@ export default {
     100% {
         transform: rotate(360deg);
     }
-}</style>
+}
+</style>

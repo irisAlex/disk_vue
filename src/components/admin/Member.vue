@@ -69,10 +69,6 @@ export default {
     },
     computed: {
         deadlinecut() {
-            // if (this.set_meal == 0) {
-            //     return 0
-            // }
-            console.log(this.expri_time)
             const date = new Date(this.expri_time * 1000);
             return date.toLocaleString(); 
         }

@@ -176,7 +176,7 @@ export default {
             formData.append("formType", this.billType)
             formData.append('file', param.file)
             this.$http({
-                url: `/fileUpload`,   //ES6语法，引入组件内的 route object（路由信息对象） 
+                url: `/file_upload`,   //ES6语法，引入组件内的 route object（路由信息对象） 
                 method: 'post',
                 data: formData
             }).then((res) => {
