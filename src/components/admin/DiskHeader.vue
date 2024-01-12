@@ -76,6 +76,9 @@ export default {
         quit() {
             localStorage.removeItem('user');
             localStorage.removeItem('token');
+            localStorage.removeItem('email')
+            localStorage.removeItem("set_meal")
+            localStorage.removeItem("expri_time")
             this.$router.push('vip')
         },
     },
