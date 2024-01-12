@@ -125,7 +125,7 @@ export default {
 	methods: {
 		buy_alert () {
 			const user = localStorage.getItem('user')
-			if (user == "") {
+			if (user == null || user == "") {
 				ajerror('请先登陆在操作');
 				$("#alertMsg").show();
 				return
