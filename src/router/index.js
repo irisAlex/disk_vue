@@ -108,6 +108,16 @@ export default new Router({
 		meta: { 
 			requiresAuth: true 
 		}
+	},
+	{
+		path : '/shop',
+		name : 'shop',
+		components :{
+			main : Disk
+		},
+		meta: { 
+			requiresAuth: true 
+		}
 	}
   ]
 })

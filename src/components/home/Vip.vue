@@ -25,7 +25,7 @@
 										</ul>
 										<div class="pricing-footer">
 											<p></p>
-											<button type="button" onclick="buy_alert();">立即购买</button>
+											<button type="button" @click="buy_alert">立即购买</button>
 										</div>
 									</div>
 									<div class="span3 pricing hover-effect" style="width:200px">
@@ -43,7 +43,7 @@
 										</ul>
 										<div class="pricing-footer">
 											<p></p>
-											<button type="button" onclick="buy_alert();">立即购买</button>
+											<button type="button" @click="buy_alert">立即购买</button>
 										</div>
 									</div>
 									<div class="span3 pricing hover-effect" style="width:200px">
@@ -61,7 +61,7 @@
 										</ul>
 										<div class="pricing-footer">
 											<p></p>
-											<button type="button" onclick="buy_alert();">立即购买</button>
+											<button type="button" @click="buy_alert">立即购买</button>
 										</div>
 									</div>
 									<div class="span3 pricing hover-effect" style="width:200px">
@@ -79,7 +79,7 @@
 										</ul>
 										<div class="pricing-footer">
 											<p></p>
-											<button type="button" onclick="buy_alert();">立即购买</button>
+											<button type="button" @click="buy_alert">立即购买</button>
 										</div>
 									</div>
 									<div class="span3 pricing hover-effect" style="width:200px">
@@ -97,7 +97,7 @@
 										</ul>
 										<div class="pricing-footer">
 											<p></p>
-											<button type="button" onclick="buy_alert();">立即购买</button>
+											<button type="button" @click="buy_alert">立即购买</button>
 										</div>
 									</div>
 								</div>
@@ -123,24 +123,14 @@ export default {
 		// }
 	},
 	methods: {
-		getData() {
-			// this.$http({
-			// 	url: 'https://cnodejs.org/api/v1/topics',
-			// 	method: 'get',
-			// 	params: {
-			// 		page: 1,
-			// 		limit: 20,
-			// 	}
-			// })
-			// 	.then((response) => {
-			// 		if (response.data.success === true) {
-			// 			this.posts = response.data.data;
-			// 			this.loading = true;
-			// 		}
-			// 	})
-			// 	.catch(function (error) {
-			// 		console.log(error);
-			// 	});
+		buy_alert () {
+			const user = localStorage.getItem('user')
+			if (user == "") {
+				ajerror('请先登陆在操作');
+				$("#alertMsg").show();
+				return
+			}
+			this.$router.push('/shop')
 		}
 	},
 	beforeMount() {
@@ -163,11 +153,4 @@ export default {
 .center-me {
 	text-align: center;
 }
-
 </style>
-
-<script type="text/javascript">
-				buy_alert = function(){
-		ajerror("请先登录");
-	}
-</script>

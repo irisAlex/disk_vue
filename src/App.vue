@@ -20,7 +20,7 @@ export default {
   },
   created() {
     const routerName = this.$route.name
-    if (routerName === 'dashboard' || routerName == 'manager' || routerName == 'upload'|| routerName == 'exchange' ) {
+    if (routerName === 'dashboard' || routerName == 'manager' || routerName == 'upload' || routerName == 'exchange' || routerName == 'shop') {
       this.a_show = false
       this.b_show = true
       this.f_show = false
@@ -45,7 +45,7 @@ export default {
   watch: {
     $route() {
       const routerName = this.$route.name
-      if (routerName === 'dashboard' || routerName == 'manager' || routerName == 'upload' || routerName == 'exchange') {
+      if (routerName === 'dashboard' || routerName == 'manager' || routerName == 'upload' || routerName == 'exchange' || routerName == 'shop') {
         this.a_show = false
         this.b_show = true
         this.f_show = false
