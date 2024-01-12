@@ -48,7 +48,7 @@
                 <!--a title="" data-placement="bottom" data-rel="tooltip" class="btn btn-app btn-mini" href="javascript:favorite_alert()" data-original-title="关注，下次快速找到他"><i class="icon-heart-empty bigger-160"></i>关注</a-->
 
                 <a title="" data-placement="bottom" data-rel="tooltip" class="btn btn-app btn-mini btn-warning"
-                  href="javascript:void(0)" onclick="ajerror('请登录后再进行操作。');" data-original-title="举报非法文件"><i
+                  href="javascript:void(0)" data-original-title="举报非法文件"><i
                     class="icon-warning-sign bigger-160"></i>举报</a>
               </div>
             </div>
@@ -67,7 +67,7 @@
                       <div>
 
 
-                        <div id="down_link"><a href="#" rel="nofollow" title="下载页面"
+                        <div id="down_link"><a href="javascript:void(0)" rel="nofollow" title="下载页面"
                             class="down_now" v-on:click="downData"><span></span></a></div>
 
                         <div class="clear"></div>
