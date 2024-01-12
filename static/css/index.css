@@ -7479,7 +7479,7 @@ a:focus {
   outline: none;
 }
 .inner {
-  background: url(../bg_noise-5.png) left top repeat;
+  /* background: url(../bg_noise-5.png) left top repeat; */
 }
 #navigation {
   *zoom: 1;

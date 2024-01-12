@@ -9,7 +9,7 @@ body {
     font-size: 13px;
     color: #393939;
     min-height: 100%;
-    background: #FFF url(../background.png) repeat-x 0 0
+    background: #FFF  repeat-x 0 0
 }
 
 #main-container {

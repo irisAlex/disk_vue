@@ -15,16 +15,16 @@
                     <div class="panel-body">
                         <ul style="margin-left:0px;">
                             <li style="line-height: 35px;"><b>用户名</b>：{{userName}} <a href="vip.php" title="VIP"></a> <b
-                                    style="margin-left: 20px;">当前网赚套餐：</b>1</li>
+                                    style="margin-left: 20px;">当前网赚套餐：</b>{{set_meal}}</li>
                             <li style="line-height: 35px;"><b>VIP结束时间</b>：<span
-                                    class="txt_r">2024-01-11</span>&nbsp;&nbsp;<a href="vip">购买/续费VIP</a></li>
+                                    class="txt_r">{{deadlinecut}}</span>&nbsp;&nbsp;<a href="vip">购买/续费VIP</a></li>
                             <!-- <li style="line-height: 35px;" class="clear"><b>个人主页</b>：<input type="text" class="span8"
                                     size="50" id="myspace_url" value=""
                                     onclick="$('#myspace_url').select();ie_copy_text('myspace_url','个人主页链接复制成功');"
                                     readonly=""><input type="button" value="复制链接"
                                     onclick="$('#myspace_url').select();ie_copy_text('myspace_url','个人主页链接复制成功');"
                                     class="btn btn-small"></li> -->
-                            <li style="line-height: 35px;"><b>联系邮箱</b>：libin_kongjie@126.com</li>
+                            <li style="line-height: 35px;"><b>联系邮箱</b>：{{ email }}</li>
                             <!-- <li style="line-height: 35px;"><b>可提现金额</b>：<span class="txt_r">￥0</span>&nbsp;&nbsp;<a
                                     href="mydisk.php?item=profile&amp;menu=income&amp;action=to_income">【申请提现】</a>&nbsp;<a
                                     href="pay.php"></a></li> -->
@@ -58,11 +58,24 @@ export default {
     name: 'member',
     data() {
         return {
-            userName : localStorage.getItem('user')
+            userName : localStorage.getItem('user'),
+            email : localStorage.getItem('email'),
+            set_meal : localStorage.getItem('set_meal'),
+            expri_time : localStorage.getItem("expri_time")
         }
     },
     components: {
         Art
+    },
+    computed: {
+        deadlinecut() {
+            // if (this.set_meal == 0) {
+            //     return 0
+            // }
+            console.log(this.expri_time)
+            const date = new Date(this.expri_time * 1000);
+            return date.toLocaleString(); 
+        }
     },
     mounted() {
         

@@ -109,8 +109,8 @@ export default {
             user: "",
             pwd: "",
             loading: false,
-            data: null,
-            path : null
+            data: "",
+            path : ''
         }
     },
     computed: {
@@ -136,18 +136,22 @@ export default {
                 return
             }
 
-           // this.load()
             this.$http({
                 url: `/login`,   //ES6语法，引入组件内的 route object（路由信息对象） 
                 method: 'post',
                 data: JSON.stringify({
                     user: this.user,
-                    pwd: this.pwd
+                    cipher: this.pwd
                 })
             }).then((response) => {
                 if (response.status === 200) {
+                    console.log(response.data)
+
                     localStorage.setItem('user', response.data.user)
                     localStorage.setItem('token', response.data.token);
+                    localStorage.setItem('email',response.data.email)
+                    localStorage.setItem("set_meal",response.data.set_meal)
+                    localStorage.setItem("expri_time",response.data.exri_time)
                     this.path = 'dashboard'
                     this.load()
                 }
@@ -177,25 +181,27 @@ export default {
                 $('#e_email').addClass('txtred');
                 return
             }
-
-            this.load()
             this.$http({
                 url: `/register`,   //ES6语法，引入组件内的 route object（路由信息对象） 
                 method: 'post',
                 data: JSON.stringify({
-                    user: this.username,
-                    pwd: this.password,
+                    name: this.username,
+                    cipher: this.password,
                     email: this.email
                 })
             }).then((response) => {
+             //   this.msg = response.data
                 if (response.status === 200) {
                     localStorage.setItem('user', response.data.user)
                     localStorage.setItem('token', response.data.token);
+                    localStorage.setItem('email',response.data.email)
+                    localStorage.setItem("set_meal",response.data.set_meal)
+                    localStorage.setItem("expri_time",response.data.exri_time)
                     this.path = 'dashboard'
                     this.load()
                 }
             }).catch(function (error) {
-                ajerror('用户已经存在，注册失败');
+                ajerror('用户或email 已经存在，请修改后在重新注册');
                 $("#alertMsg").show();
                 console.log(error);
             });

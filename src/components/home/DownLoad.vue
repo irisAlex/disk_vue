@@ -67,9 +67,8 @@
                       <div>
 
 
-                        <div id="down_link"><a :href="downLink" rel="nofollow"
-                            title="进入DXSHJCSTKS_01-46_PDF.rar下载页面"
-                            class="down_now" ><span>进入DXSHJCSTKS_01-46_PDF.rar下载页面</span></a></div>
+                        <div id="down_link"><a href="#" rel="nofollow" title="下载页面"
+                            class="down_now" v-on:click="downData"><span></span></a></div>
 
                         <div class="clear"></div>
                       </div>
@@ -103,9 +102,7 @@
               </div>
 
               <div class="row-fluid">
-                <a class="btn btn-warning btn-block"
-                  href="vip"
-                  target="_blank"><i class="icon-user"></i> 立即成为VIP会员</a>
+                <a class="btn btn-warning btn-block" href="vip" target="_blank"><i class="icon-user"></i> 立即成为VIP会员</a>
               </div>
 
               <div class="row-fluid">
@@ -130,8 +127,8 @@
                 <ul>
                   <li v-for="f in features" :key="f.title">
                     <a href="###" class="block">
-                      <h5>{{f.title}}</h5>
-                      <p>{{f.describe}}</p>
+                      <h5>{{ f.title }}</h5>
+                      <p>{{ f.describe }}</p>
                       <div class="down" :id="f.down"></div>
                       <div class="up" :id="f.up" style="opacity: 1;"></div>
                     </a>
@@ -166,15 +163,15 @@ export default {
         { title: '下载工具', vip: '支持', free: '不支持' },
         { title: '存储空间', vip: '1TB永久空间', free: '无永久空间' }
       ],
-      features : [
-        {title:'智能下载，简单高速',describe:'淘汰眼花缭乱的下载节点，智能下载技术全面应用，更加简单，更加高速。',down:'feature-1-b',up:'feature-1-a'},
-        {title:'全新界面，完美洁净',describe:'HTML5界面引擎，遍布网盘的每一个角落，流畅与轻快更进一步。',down:'feature-2-b',up:'feature-2-a'},
-        {title:'全新引擎，高效稳定',describe:'由内至外的全面升级和优化，大幅降低HTTP响应时间，响应迅速，智能新奇。',down:'feature-3-b',up:'feature-3-a'},
-        {title:'最高单价，绝不扣量',describe:'万次下载最高1600元，保证不扣1分量。',down:'feature-4-b',up:'feature-4-a'},
-        {title:'7x12小时客户服务',describe:'本站提供 7x12 客户服务，快速解决问题',down:'feature-5-b',up:'feature-5-a'},
-        {title:'专业专注，不断进步',describe:'超过50项全新改变，熟悉而又新奇，专注云储存服务，依然简洁，更不简单。',down:'feature-6-b',up:'feature-6-a'}
+      features: [
+        { title: '智能下载，简单高速', describe: '淘汰眼花缭乱的下载节点，智能下载技术全面应用，更加简单，更加高速。', down: 'feature-1-b', up: 'feature-1-a' },
+        { title: '全新界面，完美洁净', describe: 'HTML5界面引擎，遍布网盘的每一个角落，流畅与轻快更进一步。', down: 'feature-2-b', up: 'feature-2-a' },
+        { title: '全新引擎，高效稳定', describe: '由内至外的全面升级和优化，大幅降低HTTP响应时间，响应迅速，智能新奇。', down: 'feature-3-b', up: 'feature-3-a' },
+        { title: '最高单价，绝不扣量', describe: '万次下载最高1600元，保证不扣1分量。', down: 'feature-4-b', up: 'feature-4-a' },
+        { title: '7x12小时客户服务', describe: '本站提供 7x12 客户服务，快速解决问题', down: 'feature-5-b', up: 'feature-5-a' },
+        { title: '专业专注，不断进步', describe: '超过50项全新改变，熟悉而又新奇，专注云储存服务，依然简洁，更不简单。', down: 'feature-6-b', up: 'feature-6-a' }
       ],
-      downLink : '',
+     // downLink: '',
       randomNumber: 0
     };
   },
@@ -184,52 +181,64 @@ export default {
     },
   },
   methods: {
-    downData() {
-      console.log(this.$route.params)
-
+    downData(event) { 
+      
+      event.preventDefault();
+      if (localStorage.getItem('token') == null) {
+              ajerror("请先登陆在进行下载");
+                $("#alertMsg").show();
+              return
+      } 
       this.$http({
-      	url: `/downloadFile?file_id=`+ this.$route.params.id,
-      	method: 'get',
-      	data: null
+        url: `/downloadFile?file_id=` + this.$route.params.id,
+        method: 'get',
+        data: null,
+        headers: { // 添加自定义的 HTTP 头
+          'Token': localStorage.getItem('token')          // 添加其他自定义头
+        },
       })
-      	.then((res) => {
-      		if (res.status === 200) {
+        .then((res) => {
+          if (res.status === 200) {
             const link = res.data.content.split('|')
             if (link.length <= 1) {
-                  ajsuccess("资源不存在");
-                  $("#alertMsg").show(); 
-                  return
+              ajerror("资源不存在");
+              $("#alertMsg").show();
+              return
             }
             this.randomNumber = Math.floor(Math.random() * 5) + 1
-            this.downLink = link[this.randomNumber]
-      		}
-      	})
-      	.catch(function (error) {
-      		console.log(error);
-      	});
+           // this.downLink = link[this.randomNumber]
+
+            window.location.href = link[this.randomNumber];
+          }
+        })
+        .catch(function (error) {
+          ajerror("今天已经到达下载巅峰了，明天再来～～");
+          $("#alertMsg").show();
+          console.log(error);
+        });
     },
-    getFileName () {
+    getFileName() {
       this.$http({
-      	url: 'http://www.xunniuwp.com/file-4223602.html',
-      	method: 'get',
-      	data: null
+        url: 'http://www.xunniuwp.com/file-4223602.html',
+        method: 'get',
+        data: null
       })
-      	.then((res) => {
+        .then((res) => {
           console.log(res)
-      		// if (res.status === 200) {
+          // if (res.status === 200) {
           //   const link = res.data.content.split('|')
           //   this.downLink = link[1]
           //   console.log(link[1])
-      		// }
-      	})
-      	.catch(function (error) {
-      		console.log(error);
-      	});
+          // }
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
     }
   },
   mounted() {
-   this.downData()
-   // this.getFileName()
+ //   this.downData()
+    // this.getFileName()
   },
   beforeMount() {
 

@@ -6711,7 +6711,7 @@ a.badge:focus {
 .gritter-light .gritter-bottom,
 .gritter-light .gritter-top,
 .gritter-light .gritter-close {
-  background-image: url(../gritter-light.png);
+  /* background-image: url(../gritter-light.png); */
   color: #222;
 }
 .gritter-light .gritter-title {
