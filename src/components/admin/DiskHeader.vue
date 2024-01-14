@@ -6,7 +6,7 @@
                 <a class="brand" href="#"><img src="static/img/logo.png" style="width: 120px; height: 60px;"></a>
                 <ul class="nav1 main-menu menu-left">
                     <li v-for="item in items" :key="item.key">
-                        <a :href="item.link">{{ item.message }}</a>
+                        <a href="javascript:void(0)" @click="Permission(item.link)">{{ item.message }}</a>
                     </li>
                 </ul>
                 <ul class="nav1 ace-nav pull-right">
@@ -80,6 +80,16 @@ export default {
             localStorage.removeItem("expri_time")
             this.$router.push('vip')
         },
+        Permission(link) {
+            if (link == 'manager' || link == 'upload'){
+                ajerror("用户暂无权限访问，请联系管理员开通。");
+                $("#alertMsg").show();
+                return
+            }
+
+            window.location.href = link
+
+        }
     },
     mounted() {
     },

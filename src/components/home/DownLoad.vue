@@ -199,16 +199,7 @@ export default {
       })
         .then((res) => {
           if (res.status === 200) {
-            const link = res.data.content.split('|')
-            if (link.length <= 1) {
-              ajerror("资源不存在");
-              $("#alertMsg").show();
-              return
-            }
-            this.randomNumber = Math.floor(Math.random() * 5) + 1
-           // this.downLink = link[this.randomNumber]
-
-            window.location.href = link[this.randomNumber];
+            window.location.href = res.data.content;
           }
         })
         .catch(function (error) {
