@@ -9,22 +9,26 @@
         </div>
         <div class="wrapper-md" ng-controller="FormDemoCtrl">
             <div class="exchange-page">
-                <el-container>
-                    <!-- 主体内容 -->
-                    <el-main>
-                        <!-- 兑换码输入框 -->
-                        <el-form :model="form" label-width="80px">
-                            <el-form-item label="兑换码:">
-                                <el-input v-model="form.code" placeholder="请输入兑换码"></el-input>
-                            </el-form-item>
-
-                            <!-- 提交按钮 -->
-                            <el-form-item>
-                                <el-button type="primary" @click="submitCode">兑换</el-button>
-                            </el-form-item>
-                        </el-form>
-                    </el-main>
-                </el-container>
+                <section data-v-17533193="" class="el-container">
+                    <main data-v-17533193="" class="el-main">
+                        <form data-v-17533193="" class="el-form">
+                            <div data-v-17533193="" class="el-form-item"><label class="el-form-item__label"
+                                    style="width: 80px;">兑换码:</label>
+                                <div class="el-form-item__content" style="margin-left: 80px;">
+                                    <div data-v-17533193="" class="el-input"><!----><input type="text" autocomplete="off"
+                                            placeholder="请输入兑换码" class="el-input__inner"><!----><!----><!----><!----></div>
+                                    <!---->
+                                </div>
+                            </div>
+                            <div data-v-17533193="" class="el-form-item"><!---->
+                                <div class="el-form-item__content" style="margin-left: 80px;"><button data-v-17533193=""
+                                        type="button"
+                                        class="el-button el-button--primary" @click="submitCode"><!----><!----><span>兑换</span></button><!---->
+                                </div>
+                            </div>
+                        </form>
+                    </main>
+                </section>
             </div>
 
         </div><!-- #main-content -->
@@ -49,6 +53,7 @@
 
 <script>
 export default {
+    name: "exchange",
     data() {
         return {
             form: {
@@ -68,13 +73,13 @@ export default {
             }).then((res) => {
                 console.log(res)
                 if (res.status == 200) {
-                    localStorage.setItem("set_meal",res.data.set_meal)
-                    localStorage.setItem("expri_time",res.data.exri_time)
+                    localStorage.setItem("set_meal", res.data.set_meal)
+                    localStorage.setItem("expri_time", res.data.exri_time)
                     ajsuccess('兑换成功')
                     $("#alertMsg").show();
                 }
             }).catch(function (error) {
-                    ajerror('此卡密已经被兑换过了或不存在，请换其他的卡密');
+                ajerror('此卡密已经被兑换过了或不存在，请换其他的卡密');
                 $("#alertMsg").show();
                 console.log(error);
             });

@@ -25,7 +25,7 @@
 										</ul>
 										<div class="pricing-footer">
 											<p></p>
-											<button type="button" @click="buy_alert">立即购买</button>
+											<button type="button" >无需购买</button>
 										</div>
 									</div>
 									<div class="span3 pricing hover-effect" style="width:200px">
@@ -66,9 +66,9 @@
 									</div>
 									<div class="span3 pricing hover-effect" style="width:200px">
 										<div class="pricing-head">
-											<h3>一年会员 <span><span
-														style="color:#FFE500;font-size:16px;">平均每天0.21元</span></span></h3>
-											<h4>80<i>元</i> <span>一年(365天)</span></h4>
+											<h3>半年会员 <span><span
+														style="color:#FFE500;font-size:16px;">平均每天0.16元</span></span></h3>
+											<h4>30<i>元</i> <span>一年(180天)</span></h4>
 										</div>
 										<ul class="pricing-content unstyled">
 											<li><i class="icon-globe"></i> 当天下载额度 200 次</li>
@@ -84,14 +84,13 @@
 									</div>
 									<div class="span3 pricing hover-effect" style="width:200px">
 										<div class="pricing-head">
-											<h3>三年会员 <span><span style="color:#FFE500;font-size:16px;">每天限量1位</span></span>
+											<h3>一年会员 <span><span style="color:#FFE500;font-size:16px;">平均每天0.13元</span></span>
 											</h3>
-											<h4>1000<i>元</i> <span>永久VIP</span></h4>
+											<h4>50<i>元</i> <span>一年(365天)</span></h4>
 										</div>
 										<ul class="pricing-content unstyled">
 											<li><i class="icon-globe"></i> 当天下载额度 600 次</li>
 											<li><i class="icon-minus-sign"></i> 没有弹窗广告</li>
-											<li><i class="icon-cloud-upload"></i> 文件高速上传</li>
 											<li><i class="icon-cloud-download"></i> VIP高速下载</li>
 											<li><i class="icon-time "></i> 下载免等待</li>
 										</ul>
@@ -130,7 +129,7 @@ export default {
 				$("#alertMsg").show();
 				return
 			}
-			this.$router.push('/shop')
+			window.location.href = 'https://shop456357602.m.taobao.com';
 		}
 	},
 	beforeMount() {

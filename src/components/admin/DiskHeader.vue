@@ -66,8 +66,7 @@ export default {
                 { message: '首页', 'link': "dashboard" },
                 { message: '上传文件', 'link': "upload" },
                 { message: '文件管理', 'link': "manager" },
-                { message: '兑换码', 'link': "exchange" },
-                { message: '开通会员', 'link': "shop" }
+                { message: '兑换码', 'link': "exchange" }
             ],
             accountUser : localStorage.getItem('user')
         }

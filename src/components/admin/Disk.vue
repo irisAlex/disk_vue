@@ -12,7 +12,6 @@
                 <cn-upload v-show="ul_show"></cn-upload>
                 <cn-member v-show="mm_show"></cn-member>
                 <cn-exchange v-show="ex_show"></cn-exchange>
-                <cn-shop v-show="s_show"></cn-shop>
             </div>
         </div>
     </div>
@@ -23,7 +22,6 @@ import cnManager from '@/components/admin/Manager'
 import cnMember from '@/components/admin/Member'
 import cnUpload from '@/components/admin/Upload'
 import cnExchange from '@/components/admin/Exchange'
-import cnShop from '@/components/admin/Shop'
 import router from '../../router'
 export default {
     name: 'disk',
@@ -34,7 +32,6 @@ export default {
             mm_show: false,
             loading: false,
             ex_show: false,
-            s_show: false,
             load_data: null,
             sideMenuList: []
         }
@@ -95,12 +92,6 @@ export default {
                         { message: '兑换码', link: "exchange" }
                     ]
                     break;
-                case 'shop':
-                    this.s_show = true
-                    this.sideMenuList = [
-                        { message: '开通会员步骤', link: "exchange" }
-                    ]
-                    break;
                 default:
                     this.mm_show = true
                     this.sideMenuList = [
@@ -115,8 +106,7 @@ export default {
         cnManager,
         cnUpload,
         cnMember,
-        cnExchange,
-        cnShop
+        cnExchange
     },
     mounted() {
         this.verifyToken()
