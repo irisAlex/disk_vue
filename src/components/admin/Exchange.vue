@@ -16,7 +16,7 @@
                                     style="width: 80px;">兑换码:</label>
                                 <div class="el-form-item__content" style="margin-left: 80px;">
                                     <div data-v-17533193="" class="el-input"><!----><input type="text" autocomplete="off"
-                                            placeholder="请输入兑换码" class="el-input__inner"><!----><!----><!----><!----></div>
+                                            placeholder="请输入兑换码" class="el-input__inner" v-model="inputValue"><!----><!----><!----><!----></div>
                                     <!---->
                                 </div>
                             </div>
@@ -56,19 +56,23 @@ export default {
     name: "exchange",
     data() {
         return {
-            form: {
-                code: ''
-            }
+            inputValue: ''
         };
     },
     methods: {
         submitCode() {
+            if (this.inputValue == "") {
+                ajerror('此卡密不能为空');
+                $("#alertMsg").show();
+                return
+            }
+
             this.$http({
                 url: `/cash_vip`,   //ES6语法，引入组件内的 route object（路由信息对象） 
                 method: 'post',
                 data: JSON.stringify({
                     user: localStorage.getItem('user'),
-                    card_key: this.form.code
+                    card_key: this.inputValue
                 })
             }).then((res) => {
                 console.log(res)
