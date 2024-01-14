@@ -8,6 +8,7 @@ import Policy from '@/components/home/Policy'
 import Rule from '@/components/home/Rule'
 import Contact from '@/components/home/Contact'
 import Disk from '@/components/admin/Disk'
+import NoFount from '@/components/home/NoFount'
 Vue.use(Router)
 
 export default new Router({
@@ -114,6 +115,16 @@ export default new Router({
 		name : 'shop',
 		components :{
 			main : Disk
+		},
+		meta: { 
+			requiresAuth: true 
+		}
+	},
+	{
+		path : '*',
+		name : '404',
+		components :{
+			main : NoFount
 		},
 		meta: { 
 			requiresAuth: true 
