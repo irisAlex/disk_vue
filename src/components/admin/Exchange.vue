@@ -12,11 +12,10 @@
                 <section data-v-17533193="" class="el-container">
                     <main data-v-17533193="" class="el-main">
                         <form data-v-17533193="" class="el-form">
-                            <div data-v-17533193="" class="el-form-item"><label class="el-form-item__label"
-                                    style="width: 80px;">兑换码:</label>
+                            <div data-v-17533193="" class="el-form-item">
                                 <div class="el-form-item__content" style="margin-left: 80px;">
                                     <div data-v-17533193="" class="el-input"><!----><input type="text" autocomplete="off"
-                                            placeholder="请输入兑换码" class="el-input__inner" v-model="inputValue"><!----><!----><!----><!----></div>
+                                            placeholder="请输入兑换码" class="el-input__inner" v-model="inputValue" style="width:380px;"><!----><!----><!----><!----></div>
                                     <!---->
                                 </div>
                             </div>
